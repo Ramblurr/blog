@@ -12,6 +12,6 @@ This is also a field test of the Wordpress Android application.
 We have had 3 presentations so far. Right now Sebastian Kügler is giving a great talk concerning optimizing your applications for mobile devices.
 
 More quality updates soon.<br/>
-<a href="http://www.binaryelysium.com/blog/wp-content/uploads/2009/01/wpid-29.jpg">
-   <img src="http://www.binaryelysium.com/blog/wp-content/uploads/2009/01/wpid-29-240x320.jpg" alt="thumbnail"/>
+<a href="{{site.base_url}}/uploads/2009/01/wpid-29.jpg">
+   <img src="{{site.base_url}}/uploads/2009/01/wpid-29-240x320.jpg" alt="thumbnail"/>
 </a>

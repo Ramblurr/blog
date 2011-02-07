@@ -18,7 +18,7 @@ Officially, Blurb supports Booksmart only on Windows and Mac, however it is a ge
 Note: While, the following instructions are Ubuntu specific, a determined other-distro user could replace the <em>apt </em> calls in the script with calls to the appropriate package management tool.
 </div>
 
-<div class="stb-download_box" style="background-image: url(http://www.binaryelysium.com/blog/wp-content/plugins/wp-special-textboxes/images/download-b.png); min-height: 40px; padding-left: 50px; "><br>
+<div class="stb-download_box" style="background-image: url({{site.base_url}}/plugins/wp-special-textboxes/images/download-b.png); min-height: 40px; padding-left: 50px; "><br>
 <strong><a href="http://binaryelysium.com/code/Blurb_Booksmart_Installer-0.2.tar.gz">Blurb Booksmart Installer</a></strong><br>
 Author: <a href="http://www.binaryelysium.com">Ramblurr</a>, version: 0.2, updated: December 12, 2009,<br>
 Requires Java Version 1.6 or higher, Ubuntu Linux.</div>
@@ -56,6 +56,6 @@ You can put this launcher script anywhere and use it to start bookmark. Don't fo
 
 By default, Booksmart saves its data in $HOME/My Documents if you don't like this you can change it by opening Booksmart and running File > Change Data Location.
 
-<a href="http://www.binaryelysium.com/blog/wp-content/uploads/2009/10/booksmart_linux.png" title="Booksmart running in Kubuntu" rel="lightbox"><img src="http://www.binaryelysium.com/blog/wp-content/uploads/2009/10/booksmart_linux-300x187.png" alt="Booksmart running in Kubuntu" title="Booksmart running in Linux" width="300" height="187" class="size-medium wp-image-156" /></a>
+<a href="{{site.base_url}}/uploads/2009/10/booksmart_linux.png" title="Booksmart running in Kubuntu" rel="lightbox"><img src="{{site.base_url}}/uploads/2009/10/booksmart_linux-300x187.png" alt="Booksmart running in Kubuntu" title="Booksmart running in Linux" width="300" height="187" class="size-medium wp-image-156" /></a>
 
 Happy Blurbing : )
