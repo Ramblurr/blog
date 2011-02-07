@@ -26,7 +26,9 @@ This is a figure from Karl Fogel's chapter in Orielly's book <a href="http://bea
 Piet is an attempt to provide a functional language that can be used to create beautiful programs in the style of modern abstract painters. The <a href="http://www.dangermouse.net/esoteric/piet/samples.html" title="sample Piet programs">sample programs</a> page has quite a few examples of programs written in Piet. Some are beautiful and others are downright ugly.
 
 Take these two programs:
+
 <img src="http://www.dangermouse.net/esoteric/piet/Piet_hello_big.png" title="Ugly sample"/> <img src="http://www.dangermouse.net/esoteric/piet/hw1-11.gif" title="Less ugly sample"/>
+
 They both print the string "Hello World", yet one is obviously more appealing than the other. Furthermore, the aesthetic properties of each program can be judged by any layman.
 
 Intrigued by this concept of beautiful programs, I set out to create such a program in Piet, but I soon realized that in breaking out of the confines of the text editor Piet had nowhere else to land. That is, conventional image editors (such as the GIMP) are not suited to creating Piet programs. This is because operations in Piet are defined as <em>changes</em> between hue and lightness, which means to know which operation one particular pixel represents you must know the operations of every preceding pixel. Without assistance from the editor creating a program of any non-trivial length is extremely difficult. You are unlikely to understand even a non-trivial program after putting it down for several days.
