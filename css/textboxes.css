@@ -1,22 +1,22 @@
 
 .stb-container {
-    margin: 0px auto; 
+    margin: 0px auto;
     padding: 0px;
     position: static;
 }
 .stb-tool {
-     float: right;  padding: 0px; 
+     float: right;  padding: 0px;
     margin: 0px auto;
 }
 
-.stb-alert_box, 
+.stb-alert_box,
 .stb-download_box,
-.stb-info_box, 
-.stb-warning_box, 
+.stb-info_box,
+.stb-warning_box,
 .stb-black_box {
-        margin-top: 10px;  
-    margin-right: 10px;  
-    margin-bottom: 10px;  
+        margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
         padding-left: 25px;
     padding-right: 5px;
@@ -29,35 +29,35 @@
 
 .stb-alert_box {
     background-color: #FFE7E6;
-        background-image: url(images/alert.png); 
+        background-image: url(/blog/images/alert.png);
         border: 1px solid #FF4F4A;
     color: #000000;
 }
 
 .stb-download_box {
     background-color: #DFF0FF;
-        background-image: url(images/download.png);
+        background-image: url(/blog/images/download.png);
         border: 1px solid #65ADFE;
     color: #000000;
 }
 
 .stb-info_box {
     background-color: #E2F8DE;
-        background-image: url(images/info.png);
+        background-image: url(/blog/images/info.png);
         border: 1px solid #7AD975;
     color: #000000;
 }
 
 .stb-warning_box {
     background-color: #FEFFD5;
-        background-image: url(images/warning.png);
+        background-image: url(/blog/images/warning.png);
         border: 1px solid #FE9A05;
     color: #000000;
 }
 
 .stb-black_box {
     background-color: #000000;
-        background-image: url(images/earth.png);
+        background-image: url(/blog/images/earth.png);
         border: 1px solid #6E6E6E;
     color: #FFFFFF;
 }
@@ -65,9 +65,9 @@
 .stb-grey_box {
     background: #EEEEEE;
     padding: 5px;
-    margin-top: 10px;  
-    margin-right: 10px;  
-    margin-bottom: 10px;  
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
     border: 1px solid #BBBBBB;
     color: #000000;
@@ -97,9 +97,9 @@
     border-bottom-color: #BBBBBB;
     border-left-color: #BBBBBB;
     min-height:20px;
-            text-align: left;   margin-top: 10px;  
-    margin-right: 10px;  
-    margin-bottom: 0px;  
+            text-align: left;   margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
     margin-left: 10px;
 }
 .stb-grey-body_box {
@@ -114,9 +114,9 @@
     border-right-color: #BBBBBB;
     border-bottom-color: #BBBBBB;
     border-left-color: #BBBBBB;
-            text-align: left;   margin-top: 0px;  
-    margin-right: 10px;  
-    margin-bottom: 10px;  
+            text-align: left;   margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
 }
 
@@ -125,12 +125,12 @@
 .stb-info-caption_box,
 .stb-warning-caption_box,
 .stb-black-caption_box {
-    border-top-style: solid;  
-    border-right-style: solid;  
-    border-left-style: solid;  
-    margin-top: 10px;  
-    margin-right: 10px;  
-    margin-bottom: 0px;  
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
     margin-left: 10px;
     font-weight: bold;
     background-repeat: no-repeat;
@@ -154,7 +154,7 @@
     }
 
 .stb-alert-caption_box {
-        background-image: url(images/alert.png);
+        background-image: url(/blog/images/alert.png);
         background-color: #FF4F4A;
     color: #FFFFFF;
     border-top-color: #FF4F4A;
@@ -164,7 +164,7 @@
 }
 
 .stb-download-caption_box {
-        background-image: url(images/download.png);
+        background-image: url(/blog/images/download.png);
         background-color: #65ADFE;
     color: #FFFFFF;
     border-top-color: #65ADFE;
@@ -174,7 +174,7 @@
 }
 
 .stb-info-caption_box {
-        background-image: url(images/info.png);
+        background-image: url(/blog/images/info.png);
         background-color: #7AD975;
     color: #FFFFFF;
     border-top-color: #7AD975;
@@ -184,7 +184,7 @@
 }
 
 .stb-warning-caption_box {
-        background-image: url(images/warning.png);
+        background-image: url(/blog/images/warning.png);
         background-color: #FE9A05;
     color: #FFFFFF;
     border-top-color: #FE9A05;
@@ -194,7 +194,7 @@
 }
 
 .stb-black-caption_box {
-        background-image: url(images/earth.png);
+        background-image: url(/blog/images/earth.png);
         background-color: #333333;
     color: #FFFFFF;
     border-top-color: #333333;
@@ -214,11 +214,11 @@
     border-right-width: 1px;
     border-bottom-width: 1px;
     border-left-width: 1px;
-            text-align: left;   border-left-style: solid;  
-    border-right-style: solid;  
-    border-bottom-style: solid;  
-    margin-top: 0px;  margin-right: 10px;  
-    margin-bottom: 10px;  
+            text-align: left;   border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    margin-top: 0px;  margin-right: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
 }
 
@@ -275,7 +275,7 @@
     border-bottom-width: 1px;
     border-left-width: 1px;
     border-top-width: 1px;
-    color: #000000; 
+    color: #000000;
         background-color: #f7cdf5;
         background-repeat: no-repeat;
     margin-top: 10px;
