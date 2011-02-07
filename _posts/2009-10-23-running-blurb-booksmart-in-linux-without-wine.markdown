@@ -18,7 +18,7 @@ Officially, Blurb supports Booksmart only on Windows and Mac, however it is a ge
 Note: While, the following instructions are Ubuntu specific, a determined other-distro user could replace the <em>apt </em> calls in the script with calls to the appropriate package management tool.
 </div>
 
-<div class="stb-download_box" style="background-image: url({{site.base_url}}/plugins/wp-special-textboxes/images/download-b.png); min-height: 40px; padding-left: 50px; "><br>
+<div class="stb-download_box" style="background-image: url({{site.base_url}}/images/download-b.png); min-height: 40px; padding-left: 50px; "><br>
 <strong><a href="http://binaryelysium.com/code/Blurb_Booksmart_Installer-0.2.tar.gz">Blurb Booksmart Installer</a></strong><br>
 Author: <a href="http://www.binaryelysium.com">Ramblurr</a>, version: 0.2, updated: December 12, 2009,<br>
 Requires Java Version 1.6 or higher, Ubuntu Linux.</div>
