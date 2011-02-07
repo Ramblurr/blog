@@ -13,4 +13,4 @@ pygments:    true
 markdown:    rdiscount
 permalink:   date
 
-base_url:  http://elusivetruth.net
+base_url:  http://elusivetruth.net/blog
