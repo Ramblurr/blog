@@ -1,7 +1,7 @@
---- 
+---
 layout: post
 title: Programming as Modern Art
-tags: 
+tags:
 - qt
 - piet
 ---
@@ -18,7 +18,8 @@ From <a href="http://www.dangermouse.net/esoteric/piet.html">Piet's specificatio
 
 Often a piece of code is referred to as beautiful or ugly; however, what the speaker usually means is that the algorithm, idea, or strategy behind the code is beautiful or elegant. Rarely can you present a piece of code and speak of the code itself as possessing the aesthetic qualities we associate with things of real beauty.
 
-[caption id="" align="aligncenter" width="300" caption="A tree diagram of Subversion's Delta Editor from Beautiful Code"]<a href="http://www.binaryelysium.com/images/beauty_0206.png" rel="lightbox"> <img src="http://www.binaryelysium.com/images/beauty_0206.png" title="A tree diagram of Subversion's Delta Editor from Beautiful Code" width="300"></a>[/caption]
+[caption id="" align="aligncenter" width="300" caption="A tree diagram of Subversion's Delta Editor from Beautiful Code"]<a href="http://www.binaryelysium.com/images/beauty_0206.png" rel="lightbox">
+![A tree diagram of Subversion's Delta Editor from Beautiful Code](http://www.binaryelysium.com/images/beauty_0206.png "A tree diagram of Subversion's Delta Editor from Beautiful Code")</a>
 This is a figure from Karl Fogel's chapter in Orielly's book <a href="http://beautifulcode.oreillynet.com/" title="Beautiful Code the Book">Beautiful Code</a> on Subversion's Delta Editor (full chapter <a href="http://www.red-bean.com/kfogel/beautiful-code/bc-chapter-02.html" title="full chapter 2">here</a>). Is the beauty of that tree diagram not immediately apparent to you? Don't worry, it wasn't obvious to the author either.
 <blockquote>I cannot claim that the beauty of this interface was immediately obvious to me. - Karl Fogel</blockquote>
 
