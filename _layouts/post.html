@@ -2,11 +2,11 @@
 layout: default
 ---
     <div class="post">
-                <h2><a href="{{ page.url }}" rel="bookmark" title="Permanent Link to {{ page.title }}">
+                <h2><a href="{{site.base_url}}{{ page.url }}" rel="bookmark" title="Permanent Link to {{ page.title }}">
                     {{ page.title }}
                     </a></h2>
                 <p class="small">
-                         Posted on {{ page.date | date: '%d %B %Y' }} 
+                         Posted on {{ page.date | date: '%d %B %Y' }}
                 </p>
 
                 <div class="entry">
