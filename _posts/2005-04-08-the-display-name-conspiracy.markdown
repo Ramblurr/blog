@@ -1,10 +1,10 @@
---- 
+---
 layout: post
 title: The Display Name Conspiracy
-tags: 
+tags:
 - relationships
 ---
-<img align="left" alt="MSN Messenger" id="image6" style="padding-right: 5px" src="http://binaryelysium.com/new/wp-content/uploads/2006/07/msnmessenger.thumbnail.jpg" />By far the most insidious feature of MSN Instant Messenger is the "Display Name" option. Perhaps the brainchild of a programmer with the goal of disrupting the social lives of teenagers worldwide, the "Display Name" option allows MSN Instant messenger (MSN from here on out) users to set a "friendly name" or nickname that others can use to identify them by besides the generally cryptic email address.
+<img align="left" alt="MSN Messenger" id="image6" style="padding-right: 5px" src="{{site.base-url}}/uploads/2006/07/msnmessenger.thumbnail.jpg" />By far the most insidious feature of MSN Instant Messenger is the "Display Name" option. Perhaps the brainchild of a programmer with the goal of disrupting the social lives of teenagers worldwide, the "Display Name" option allows MSN Instant messenger (MSN from here on out) users to set a "friendly name" or nickname that others can use to identify them by besides the generally cryptic email address.
 
 Useful right? Sure to an extent, as "Danny" is alot easier to remember and identify than some email address. The problem is with the character limit. 129 characters. Who on earth needs a simple, identifying name that long? Do give you an idea of how long that is? Here is a typical name you would find on a teenagers contact list:
 "ow how my body aches 4 ur touch. ur intoxicating 2 my senses. if only u wuld evar sumtim look @ me 2 kno i exist cuz i luv u :''("
