@@ -29,35 +29,35 @@
 
 .stb-alert_box {
     background-color: #FFE7E6;
-        background-image: url(../images/alert.png); 
+        background-image: url(images/alert.png); 
         border: 1px solid #FF4F4A;
     color: #000000;
 }
 
 .stb-download_box {
     background-color: #DFF0FF;
-        background-image: url(../images/download.png);
+        background-image: url(images/download.png);
         border: 1px solid #65ADFE;
     color: #000000;
 }
 
 .stb-info_box {
     background-color: #E2F8DE;
-        background-image: url(../images/info.png);
+        background-image: url(images/info.png);
         border: 1px solid #7AD975;
     color: #000000;
 }
 
 .stb-warning_box {
     background-color: #FEFFD5;
-        background-image: url(../images/warning.png);
+        background-image: url(images/warning.png);
         border: 1px solid #FE9A05;
     color: #000000;
 }
 
 .stb-black_box {
     background-color: #000000;
-        background-image: url(../images/earth.png);
+        background-image: url(images/earth.png);
         border: 1px solid #6E6E6E;
     color: #FFFFFF;
 }
@@ -154,7 +154,7 @@
     }
 
 .stb-alert-caption_box {
-        background-image: url(../images/alert.png);
+        background-image: url(images/alert.png);
         background-color: #FF4F4A;
     color: #FFFFFF;
     border-top-color: #FF4F4A;
@@ -164,7 +164,7 @@
 }
 
 .stb-download-caption_box {
-        background-image: url(../images/download.png);
+        background-image: url(images/download.png);
         background-color: #65ADFE;
     color: #FFFFFF;
     border-top-color: #65ADFE;
@@ -174,7 +174,7 @@
 }
 
 .stb-info-caption_box {
-        background-image: url(../images/info.png);
+        background-image: url(images/info.png);
         background-color: #7AD975;
     color: #FFFFFF;
     border-top-color: #7AD975;
@@ -184,7 +184,7 @@
 }
 
 .stb-warning-caption_box {
-        background-image: url(../images/warning.png);
+        background-image: url(images/warning.png);
         background-color: #FE9A05;
     color: #FFFFFF;
     border-top-color: #FE9A05;
@@ -194,7 +194,7 @@
 }
 
 .stb-black-caption_box {
-        background-image: url(../images/earth.png);
+        background-image: url(images/earth.png);
         background-color: #333333;
     color: #FFFFFF;
     border-top-color: #333333;
@@ -277,7 +277,6 @@
     border-top-width: 1px;
     color: #000000; 
         background-color: #f7cdf5;
-        background-image: url(http://www.binaryelysium.com/blog/wp-content/plugins/wp-special-textboxes/images/heart.png);
         background-repeat: no-repeat;
     margin-top: 10px;
   margin-right: 10px;
@@ -315,7 +314,6 @@
   border-right-style: solid;
   border-left-style: solid;
     background-color: #f844ee;
-        background-image: url(http://www.binaryelysium.com/blog/wp-content/plugins/wp-special-textboxes/images/heart.png);
         background-repeat: no-repeat;
     margin-top: 10px;
   margin-right: 10px;
