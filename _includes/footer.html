@@ -8,7 +8,7 @@
             {% for post in site.posts limit:5 %}
             <li><a href="{{ site.base_url }}{{post.url}}" title="{{post.title}}">{{ post.title }}</a></li>
             {% endfor%}
-            <li><a href="/archives.html" title="Blog Archive">Archives ...</a></li>
+            <li><a href="{{ site.base_url }}/archives.html" title="Blog Archive">Archives ...</a></li>
         </ul>
         </li>
 <li id="linkcat-28" class="widget widget_links"><h2 class="widgettitle">Links</h2>
