@@ -18,8 +18,8 @@ From <a href="http://www.dangermouse.net/esoteric/piet.html">Piet's specificatio
 
 Often a piece of code is referred to as beautiful or ugly; however, what the speaker usually means is that the algorithm, idea, or strategy behind the code is beautiful or elegant. Rarely can you present a piece of code and speak of the code itself as possessing the aesthetic qualities we associate with things of real beauty.
 
-[caption id="" align="aligncenter" width="300" caption="A tree diagram of Subversion's Delta Editor from Beautiful Code"]<a href="http://www.binaryelysium.com/images/beauty_0206.png" rel="lightbox">
-![A tree diagram of Subversion's Delta Editor from Beautiful Code](http://www.binaryelysium.com/images/beauty_0206.png "A tree diagram of Subversion's Delta Editor from Beautiful Code")</a>
+![A tree diagram of Subversion's Delta Editor from Beautiful Code](http://www.binaryelysium.com/images/beauty_0206.png "A tree diagram of Subversion's Delta Editor from Beautiful Code")
+
 This is a figure from Karl Fogel's chapter in Orielly's book <a href="http://beautifulcode.oreillynet.com/" title="Beautiful Code the Book">Beautiful Code</a> on Subversion's Delta Editor (full chapter <a href="http://www.red-bean.com/kfogel/beautiful-code/bc-chapter-02.html" title="full chapter 2">here</a>). Is the beauty of that tree diagram not immediately apparent to you? Don't worry, it wasn't obvious to the author either.
 <blockquote>I cannot claim that the beauty of this interface was immediately obvious to me. - Karl Fogel</blockquote>
 
@@ -35,11 +35,15 @@ Intrigued by this concept of beautiful programs, I set out to create such a prog
 
 There are <a href="http://www.dangermouse.net/esoteric/piet/tools.html" title="Piet tools">a couple</a> development tools for Piet out there, but most are incomplete or are suffering from bit rot. Given the graphical nature of Piet it only makes sense that the IDE and debugger should be graphical as well. With this in mind and convinced that Piet could actually be a usable langauge given the right environment, I have developed an IDE and debugger.
 
-[stextbox id="info"]<a href="http://github.com/Ramblurr/PietCreator/wiki" title="Piet Creator">Piet Creator</a> lives on github. It is written in C++ w/ Qt, so should compile on Windows, Mac, and Linux. It has only been tested on Linux.
-[/stextbox]
+<div class='stb-info_box' ><a href="http://github.com/Ramblurr/PietCreator/wiki" title="Piet Creator">Piet Creator</a> lives on github. It is written in C++ w/ Qt, so should compile on Windows, Mac, and Linux. It has only been tested on Linux.
+</div>
 
 The application is named <a href="http://github.com/Ramblurr/PietCreator/wiki" title="Piet Creator">Piet Creator</a> and the <a href="https://github.com/Ramblurr/PietCreator" title="Piet Creator source">source</a> is up on github released under the GPL v3. It is written in C++ with Qt, so it should run on Linux, Mac, and Windows platforms, but I have only tested in on Linux. For the backend interpreter it uses a slightly modified version of the fantastic Piet interpreter <a href="http://www.bertnase.de/npiet/" title="npiet, the piet interpreter">npiet</a> written by Erik Schoenfelder.
 
-[caption id="" align="aligncenter" width="300" caption="Screenshot of Piet Creator in development mode"]<a href="http://www.binaryelysium.com/images/pietcreator4.png" rel="lightbox"><img alt="" src="http://www.binaryelysium.com/images/pietcreator4.png" title="Piet Creator Screenshot" width="300" /></a>[/caption]Practically speaking I realize Piet and Piet Creator are probably useless. Though, I am convinced many programmers take themselves too seriously, so Piet Creator is a serious exercise in not being serious.
+<a href="http://www.binaryelysium.com/images/pietcreator4.png" rel="lightbox">
+<img alt="" src="http://www.binaryelysium.com/images/pietcreator4.png" title="Screenshot of Piet Creator in development mode" width="300" />
+</a>
+
+Practically speaking I realize Piet and Piet Creator are probably useless. Though, I am convinced many programmers take themselves too seriously, so Piet Creator is a serious exercise in not being serious.
 
 I have grand (if silly) visions for Piet and Piet Creator: sub-procedures, standard libraries, and arbitrary color sets. Imagine a world where programmers aren't viewed as digital carpenters or engineers pushing bits around to some functional end, but intriguing artists slinging color across a digital canvas creating functional art appreciable by all.
