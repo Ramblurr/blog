@@ -47,7 +47,7 @@ ul li 			{ padding: 2px 0 2px 9px; background: url('../images/icons/bullet_squar
 ol				{ margin-left: 35px; }
 label			{ font-weight: normal; }
 textarea		{ height: 200px; width: 500px;}
-.small			{ font-size: 1.2 em; }
+.small			{ font-size: 1.2em; }
 .nomargin		{ margin: 0; }
 a.button, button { font-weight: normal; }
 
