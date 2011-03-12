@@ -111,6 +111,13 @@ pre:hover {
     word-wrap:none !important;
     overflow: auto;
 }
+
+#sidebar {
+	font-size: 1.3em;
+}
+#sidebar h2 {
+	font-size: 1.6em;
+}
 /*********** POST SPECIFIC CSS *************/
 img[alt="Picture of an old rotary telephone dial"] { margin: 10px; border: 1px solid #000; float: right; }
 img[alt="Picture of old mailboxes"] { border: 1px solid #000; }
