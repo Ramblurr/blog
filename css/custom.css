@@ -116,9 +116,11 @@ pre:hover {
 
 #sidebar a{
 	font-size: 1.4em;
+	font-family: 'Crimson Text', Georgia, Times, serif;
 }
 #sidebar h2 {
 	font-size: 1.5em;
+	font-family: 'Allerta', Helvetica, Arial, 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
 .small {
 	font-size: 1.3em;
