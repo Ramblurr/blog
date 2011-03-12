@@ -116,5 +116,18 @@ img[alt="Picture of an old rotary telephone dial"] { margin: 10px; border: 1px s
 img[alt="Picture of old mailboxes"] { border: 1px solid #000; }
 img[alt="Hyborian War logo"] { margin: 10px; border: 1px solid #000; float:left; }
 div#CAD {
-	float: right; margin:10px; border: 1px solid #000;
+	float: right;
+	border: 1px solid #000;
+	margin: 10px;
+}
+
+div#CAD pre {
+background-color: #EEE;
+border: none;
+padding: 1.5em;
+margin: auto;
+width: auto;
+overflow-x: auto;
+-webkit-transition: none;
+transition: none;	
 }
