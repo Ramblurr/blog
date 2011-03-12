@@ -111,3 +111,5 @@ pre:hover {
     word-wrap:none !important;
     overflow: auto;
 }
+/*********** POST SPECIFIC CSS *************/
+img[alt=Picture of an old rotary telephone dial] { float: right; }
