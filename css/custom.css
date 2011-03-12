@@ -1,12 +1,13 @@
 body {
 /*	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 	font-family: "Trebuchet MS", verdana, arial, helvetica;*/
-    font: 90% constantia, palatino, "times new roman";
-
-
+/*     font: 90% constantia, palatino, "times new roman"; */
+	font-family: 'Crimson Text', Georgia, Times, serif;
+	font-size: 16px;
+	line-height: 25px;
 }
 h1,h2,h3,h4,h5,h6 {
-	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	font-family: 'Allerta', Helvetica, Arial, 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
 
 div.entry {
@@ -40,7 +41,8 @@ div.entry {
         margin: 0;
         line-height: 1em;*/
 	margin-right: 100px;
-	font-family: "Trebuchet MS", verdana, arial, helvetica;
+/* 	font-family: "Trebuchet MS", verdana, arial, helvetica; */
+	font-family: 'Allerta', Helvetica, Arial, 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
 
 #searchsubmit { display: none; }
