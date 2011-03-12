@@ -45,6 +45,10 @@ div.entry {
 	font-family: 'Allerta', Helvetica, Arial, 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
 
+#nav li {
+    font: 90% constantia, palatino, "times new roman";
+}
+
 #searchsubmit { display: none; }
 .code        { font:0.9em Monaco, monospace; }
 
