@@ -112,6 +112,9 @@ pre:hover {
     overflow: auto;
 }
 /*********** POST SPECIFIC CSS *************/
-img[alt="Picture of an old rotary telephone dial"] { border: 1px solid #000; float: right; }
-img[alt="Picture of old mailboxes"] { margin: 10px; border: 1px solid #000; }
+img[alt="Picture of an old rotary telephone dial"] { margin: 10px; border: 1px solid #000; float: right; }
+img[alt="Picture of old mailboxes"] { border: 1px solid #000; }
 img[alt="Hyborian War logo"] { margin: 10px; border: 1px solid #000; float:left; }
+div#CAD {
+	float: right; margin:10px; border: 1px solid #000;
+}

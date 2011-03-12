@@ -15,15 +15,37 @@ The postal system as a medium for gaming has certainly declined in recent decade
 
 This PBM style can be generally summed up in this laundry list:
 
-* **Asynchronous**, **turn based play** --- players didn't have to gather and play simultaneously
-* **Multiplayer** --- player interaction was a driving force
-* **Massive scale** --- a position consisted of running an empire or a a group of characters
-* **Depth** --- large number of possible player actions
+* **Asynchronous**, **turn based play** -- players didn't have to gather and play simultaneously
+* **Multiplayer** -- player interaction was a driving force
+* **Massive scale** -- a position consisted of running an empire or a a group of characters
+* **Depth** -- large number of possible player actions
 * Use of **anticipation** and **suspense** to keep players interested
-* **[Imagination]** based --- as opposed to graphic visuals
+* **[Imagination]** based -- as opposed to graphic visuals
 
 Imagination has been replaced with intense 3D visuals. The feeling of anticipation and suspense was replaced by instant gratification made possible by real-time feedback systems. Turn based, asynchronous multiplayer was replaced by real-time synchronous multiplayer. As a result of these replacements, the depth and scale of modern games has suffered. For example, in a real-time strategy game you can't have both massive scale and extreme depth, unless you want games to last for days, a big drawback for multiplayer games. These supplanted qualities thrived in a postal medium, where long and careful planning was favored over instant feedback.
 
+
+<div id="CAD">
+<pre>
+ ****************************
+ |                          |
+ |        _       __        |
+ |       / \     |  \       |
+ |      /   \    |   \      |
+ |     /         |    \     |
+ |    /          |     \    |
+ |   /           |      \   |
+ |  (ONQUEST and |ESTINY )  |
+ |   \           |      /   |
+ |    \          |     /    |
+ |     \         |    /     |
+ |      \   /    |   /      |
+ |       \_/     |__/       |
+ |                          |
+ |                          |
+ ****************************
+</pre>
+</div>
 Many people don't fully understand the depth and scale of these old PBM games. These games were not limited to your familiar chess, scrabble, and diplomacy games. They were the first true massively multiplayer games. For example, one such game was [Conquest and Destiny][cad], an open-ended, civilization building, role playing game that ran in the early 90s in which every player commanded his/her own race of custom designed beings. The game galaxy had over 7 million stars and planets to explore, colonize, and conquer. While it boasted players in the hundreds or thousands as opposed to [EVE Online's 300,000+][eve] or [World of Warcraft's 10 million+][wow], it was definitely a massive game for its time. Conquest and Destiny lived and died before the Internet, consequently all we have left from this massive text-based universe is a [rulebook and advertisement][cad] rescued from the bowels of USENET. Undoubtedly there were many fascinating inter-player narratives of the kind EVE is famous for, but we'll never read them.
 
 ![Hyborian War logo][hyblogo] Another example of a massive PBM is [Hyborian War][hyborianwar], a game of imperial conquest in the age of Conan. It began in the 1980s and is still running strong today! Check out an [example turn report][hybwarreport] for a Hyborian War position, courtesy of GrimFinger's [Hyborian War site][grimhybwar]. There were hundreds of these games once upon a time (a by all means non-exhaustive list can be found [here][boneyard]).
