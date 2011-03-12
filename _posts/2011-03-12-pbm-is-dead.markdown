@@ -16,6 +16,7 @@ I suspect that phrase produces two different reactions in those who read it. Eit
 The postal system as a medium for gaming has certainly declined in recent decades, and unfortunately the number of games in the style that PBM (play-by-mail) promoted has declined as well. In the 90s e-mail developed and many PBMs became PBEMs (play-by-email) with much success; however the transition to the Internet did not fair as well.  The way most people use and view the Internet is directly contradictory to important core mechanic of anticipation (i.e., lack of instant feedback). After all, the Internet enabled real-time mechanics that were previously impossible (not to mention the advances in computers that allow for 3d graphics). 
 
 This PBM style can be generally summed up in this laundry list:
+
 * Asynchronous, turn based play --- players didn't have to gather and play simultaneously
 * Multiplayer --- player interaction was a driving force
 * Massive scale --- a position consisted of running an empire or a a group of characters

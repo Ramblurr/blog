@@ -112,4 +112,5 @@ pre:hover {
     overflow: auto;
 }
 /*********** POST SPECIFIC CSS *************/
-img[alt=Picture of an old rotary telephone dial] { float: right; }
+img[alt="Picture of an old rotary telephone dial"] { border: 1px solid #000; float: right; }
+img[alt="Picture of old mailboxes"] { border: 1px solid #000; }
