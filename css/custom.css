@@ -130,6 +130,7 @@ pre:hover {
 }
 .small {
 	font-size: 1.3em;
+	margin-bottom: 0em;
 }
 /*********** POST SPECIFIC CSS *************/
 img[alt="Picture of an old rotary telephone dial"] { margin: 10px; border: 1px solid #000; float: right; }
