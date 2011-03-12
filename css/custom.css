@@ -38,8 +38,8 @@ div.entry {
 #header h1, #header .description {
   /*      color: #FFF;
         padding-left: 50px;
-        margin: 0;
-        line-height: 1em;*/
+        margin: 0;*/
+	line-height: 1.5em;
 	margin-right: 100px;
 /* 	font-family: "Trebuchet MS", verdana, arial, helvetica; */
 	font-family: 'Allerta', Helvetica, Arial, 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
