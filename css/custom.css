@@ -46,7 +46,8 @@ div.entry {
 }
 
 #nav li {
-    font: 90% constantia, palatino, "times new roman";
+	font-family: "Trebuchet MS", verdana, arial, helvetica;
+	font-size: 15px;
 }
 
 #searchsubmit { display: none; }
