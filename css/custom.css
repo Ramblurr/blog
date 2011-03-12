@@ -48,6 +48,7 @@ div.entry {
 #nav li {
 	font-family: "Trebuchet MS", verdana, arial, helvetica;
 	font-size: 15px;
+	line-height: 2em;
 }
 
 #searchsubmit { display: none; }
