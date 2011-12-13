@@ -6,7 +6,7 @@ layout: default
                     {{ page.title }}
                     </a></h2>
                 <p class="small">
-                         Posted on {{ page.date | date: '%d %B %Y' }}
+                         {{ page.date | date: '%d %B %Y' }}
                 </p>
 
                 <div class="entry">
@@ -14,4 +14,11 @@ layout: default
                 </div>
 
         </div> <!-- /post -->
+<h2>Recent Posts</h2>
+<ul class="posts">
+    {% for post in site.posts limit:3 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+      <li><a href="{{site.base_url}}/" title="Binary Elysium - Blog">Older posts</a></li>
+  </ul>
 

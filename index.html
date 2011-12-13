@@ -2,19 +2,10 @@
 layout: default
 title: Blog - Binary Elysium
 ---
-    {% for post in site.posts limit:5 %}
-    <div class="post">
-                <h2><a href="{{site.base_url}}{{ post.url }}" rel="bookmark" title="Permanent Link to {{ post.title }}">
-                    {{ post.title }}
-                    </a></h2>
-                <p class="small">
-                       Posted on {{ post.date | date: '%d %B %Y' }}
-                </p>
-
-                <div class="entry">
-                    {{ post.content }}
-                </div>
-
-        </div> <!-- /post -->
-
+<h2>Blog Posts</h2>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
+  </ul>
+
