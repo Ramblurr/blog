@@ -16,3 +16,4 @@ rdiscount:
 permalink:   date
 
 base_url:  http://binaryelysium.com/blog
+base_prefix: /blog
