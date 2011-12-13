@@ -24,15 +24,15 @@ Then, your email account is the lowest common denominator; with access to your e
 account (nearly) all your other accounts can be accessed. If you use
 a completely unique passwords for each service (and store them in a password manager like
 [Keepass][kpx] or [Lastpass][lp]), then access to your email account is even
-more attractive. So, the importance of securing your email account cannot be
+more attractive. Therefore, the importance of securing your email account cannot be
 overstated.
 
 When it comes to securing your email [Google's 2-factor authentication][2fac] is pretty awesome. Even though there
 are still [some important flaws][flaw] one should be aware of, it can
 significantly increase the security of your Google or Google Apps account.
 
-For me there was one major drawback to Google's 2 factor offering: it required
-a cellphone to be useful. This is a drawback for several reasons:
+For me there is one major drawback to Google's 2-factor offering: it requires
+a cellphone to be useful. This is a drawback for several reasons.
 
 First, your smartphone isn't as secure as we would like. Mobile malware is on
 the rise--[particularly][and] if you have an Android phone--and if I was
@@ -40,27 +40,27 @@ a malware writer I would be targeting 2-factor authentication apps like
 Google's.
 
 The second drawback most people won't identify with: I don't want to carry
-a smart phone with me! I travel. A lot. In fact, [I'm always traveling][et].
+a smartphone with me! I travel. A lot. In fact, [I travel by bike][et].
 When traveling by bike, minimizing weight is important followed closely by
-minimizing the value of my equipment (shiny stuff [gets broken][sad] or stolen), and smartphones are heavy and expensive. So, I carry a cheap $30 cellphone and swap sim cards as I enter new countries.
+minimizing the value of my equipment (shiny stuff [gets broken][sad] or stolen), and smartphones are heavy and expensive. So, I carry a tiny and cheap $30 cellphone and swap sim cards as I enter new countries.
 
 How then can I retain the benefit of Google's 2-factor authentication, while
-ditching the phone? I could generate OTPs through google and write them down,
+ditching the phone? I could generate OTPs through Google and write them down,
 which I have been doing for awhile, but that is a huge PITA.
 
 Enter the [Yubikey][yub]. The Yubikey is a tiny usb device that produces
-One-Time Passwords and appears to the OS as a USB keyboard, so it works on all
+One-Time Passwords and appears to the OS as a USB keyboard making it work on all
 platforms. The Yubikey can hold two identities that can be configured according
 to four different options (Yubico OTP, OATH, static, challenge-response).
 
-If only there was a way to use the Yubikey with Google's 2 factor
-authentication...
+A Yubikey seems like the perfect lightweight, secure replacement for OTP
+generation, how then could I use it with Google's 2-factor authentication?
 
 <a name="goodstuff" />
 <h3>Finding common ground: OATH-TOTP</h3>
 Originally, I imagined some system that stored your Google 2-factor auth
 secret, and allowed you to auth with your Yubico OTP. Such a system would not
-be ideal, because wherever that system lived so lived your google secret. We
+be ideal, because wherever that system lived so would live your google secret. We
 want to be sure wherever the secret is stored is secure.
 
 As it turns out [Google's 2-factor authenticator][gauth] is an implementation of the OATH-TOTP protocol, a system for generating one-time passwords via a HMAC-SHA1 hash using the current time as input.
@@ -84,15 +84,16 @@ It took awhile, but a [friend][mutant] and I eventually got around to implementi
 client-side helper application for Linux.
 
 The implementation is fairly simple (if not pretty). A challenge is generated
-based on the current time, sent to the yubikey using the `ykchalresp` utility,
+based on the current time, sent to the yubikey using the *ykchalresp* utility,
 and then the HMAC-SHA1 hash is mangled according to the HOTP specification to
 produce a 6 digit code.
 
 Before you can use the tool, you must configure your Yubikey, but then
-generating OTPs from your Yubikey is as simple as `$ ./yubi_goog.py`.
+generating OTPs from your Yubikey is as simple as:
+`$ ./yubi_goog.py`.
 
 The tool can also be used to generate OTPs without a Yubikey (using the
-`--generate` flag), but you must enter the secret on every invocation.
+*--generate* flag), but you must enter the secret on every invocation.
 
 **Grab the tool and instructions over at the [github repo][yubigoog].**
 
