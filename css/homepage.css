@@ -15,7 +15,7 @@ div.top {
 div.body { 
    margin: 0 auto; max-width: 800px; 
 /* header image from http://browse.deviantart.com/?q=elysium&order=9&offset=24#/d2vgeyy */
-   background: url(/images/elysium.png) no-repeat 15px 0
+   background: url(../images/elysium.png) no-repeat 15px 0
 }
 
 h1 { 
