@@ -15,5 +15,5 @@ rdiscount:
   extensions: [smart]
 permalink:   date
 
-base_url:  http://binaryelysium.com/blog
-base_prefix: /blog
+base_url:  http://binaryelysium.com/
+base_prefix: 

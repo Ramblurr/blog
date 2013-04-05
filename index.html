@@ -1,11 +1,107 @@
----
-layout: default
-title: Blog - Binary Elysium
----
-<h2>Blog Posts</h2>
-  <ul class="posts">
-    {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{site.base_url}}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<!DOCTYPE html>
+<head>
+    <title>Binary Elysium - No Ordinary Hotel</title>
+    <link rel="stylesheet" type="text/css" href="curve/homepage.css">
 
+
+	<link rel="openid.server" href="http://www.myopenid.com/server" />
+	<link rel="openid.delegate"  href="http://rmblr.myopenid.com/" />
+	<link rel="openid2.local_id" href="http://rmblr.myopenid.com" />
+	<link rel="openid2.provider" href="http://www.myopenid.com/server" />
+	<meta http-equiv="X-XRDS-Location"  content="http://www.myopenid.com/xrds?username=rmblr.myopenid.com" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22027971-1']);
+  _gaq.push(['_setDomainName', '.binaryelysium.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<div class="top">
+<div class="body">
+<h1>Binary Elysium</h1>
+
+<div class="translucent">
+<div class="summary">
+Hey there! My name is Casey. I'm a software developer, nomad, language lover, and coffee fiend.
+</div>
+</div>
+
+<table>
+<tr>
+<td class="left a">
+<div class="blob">
+<h2><a href="/blog/">Technical Blog</a></h2>
+<p class="icon"><img src="/curve/code.png" alt="" /></p>
+<p>Infrequently updated with my thoughts on computer science, software engineering, technology, etc.</p>
+<div class="hack"></div>
+</div>
+</td>
+
+<td class="right b">
+
+<div class="blob">
+<h2><a href="http://elusivetruth.net">Elusive Truth</a></h2>
+<p class="icon"><img src="/curve/man54.png" alt="" /></p>
+<p>A writing project chronicling my ongoing travels around the world in pursuit of the horizon.</p>
+<div class="hack"></div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="left c">
+<div class="blob">
+<h2><a href="http://quechua.binaryelysium.com">Quechua</a></h2>
+<!--- Photo by César Angel. Zaragoza http://www.flickr.com/photos/cesarangel/4377679670/ -->
+<p class="icon"><img src="/images/quechua54.jpg" title="Photo by César Angel. Zaragoza" /></p>
+<p>An online Quechua language resource, edited and compiled from my notes. Updated as I continue to explore this fascinating language.</p>
+<div class="hack"></div>
+</div>
+</td>
+
+<td class="right d">
+<div class="blob">
+<h2><a href="http://wiki.github.com/Ramblurr/PietCreator/">Piet Creator</a></h2>
+<p class="icon"><img src="/curve/piet.gif" alt="" /></p>
+<p>A cross platform GUI IDE for the esoteric programming language Piet.</p>
+<div class="hack"></div>
+</div>
+</td>
+
+
+
+</tr>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class="bottom">
+<div class="content">
+
+<table class="menu">
+<td class="left">
+
+<p><a href="https://twitter.com/#!/Ramblurr">Twitter</a><br>So there's this thing called microblogging, this is where I do it.</p>
+<p><a href="https://github.com/Ramblurr/lastfm-android/">Last.fm Android Application</a><br>Back in the day I helped release the first version of last.fm's android app.</p>
+<td class="right">
+<p><a href="https://github.com/Ramblurr">Github</a><br />
+My projects and projects I('ve) hacked on. Tread carefully, there are many a stale repo in this vast expanse.</p>
+<p><a href="http://last.fm/user/outp0ur/">Last.fm</a><br>I love music.</p>
+</table>
+
+</div>
+</div>
+
+<address class="tip">
+    <p>binaryelysium.com <span>&middot; page layout by <a href="http://inamidst.com/" title="In amidst">Sean Palmer</a><br />&middot;header image by <a href="http://cloaks.deviantart.com/art/Elysium-Texture-Pack-173766346">cloaks</a></span></p>
