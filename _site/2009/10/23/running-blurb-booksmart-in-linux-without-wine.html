@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<head profile="http://gmpg.org/xfn/11">
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate"  href="http://rmblr.myopenid.com/" />
+    <link rel="openid2.local_id" href="http://rmblr.myopenid.com" />
+    <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+    <meta http-equiv="X-XRDS-Location"  content="http://www.myopenid.com/xrds?username=rmblr.myopenid.com" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Running Blurb Booksmart in Linux (without Wine) </title>
+
+    <link rel="stylesheet" type="text/css" href="/blog/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/post_specific.css">
+    <link rel="stylesheet" href="/blog/css/textboxes.css" type="text/css" media="screen, projection" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22027971-1']);
+  _gaq.push(['_setDomainName', '.binaryelysium.com']);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</head>
+
+<div class="top">
+<div class="body">
+<h1><a href="http://binaryelysium.com/blog" title="Binary Elysium - Blog">Binary Elysium</a></h1>
+
+<div class="translucent">
+<div class="summary">
+Hey there! My name is Casey. I'm a software developer, nomad, language lover, and coffee fiend.
+</div>
+</div>
+
+<div class="content">
+
+    <div class="post">
+                <h2><a href="http://binaryelysium.com/blog/2009/10/23/running-blurb-booksmart-in-linux-without-wine.html" rel="bookmark" title="Permanent Link to Running Blurb Booksmart in Linux (without Wine)">
+                    Running Blurb Booksmart in Linux (without Wine)
+                    </a></h2>
+                <p class="small">
+                         23 October 2009
+                </p>
+
+                <div class="entry">
+                    <div class='stb-info_box'>
+Update: 2009.12.20. New version of installer released with major bugfixes. <br/>
+Update: 2010.11.06. Fixed download link.
+</div>
+
+
+<p>Blurb Booksmart is a book layouting application from <a href="http://www.blurb.com">Blurb Inc.</a> that enables budding authors to create books using their own text and images. Think of it as a highly specialized Adobe Illustrator or Microsoft Publisher. After creating your book in the software, you upload it to Blurb&rsquo;s website where you can then order printed copies of the book.</p>
+
+<p>Officially, Blurb supports Booksmart only on Windows and Mac, however it is a generic Java application, and as such can easily be ran on Linux &ndash; with some finagling. You could try and run it through wine, but the layer of emulated Windows on top of the Java makes for an annoyingly sluggish experience.  To make it easier for others, I&rsquo;ve created a little script that will automatically download, convert, and install Booksmart in Linux.</p>
+
+<div class='stb-info_box'>
+Note: While, the following instructions are Ubuntu specific, a determined other-distro user could replace the <em>apt </em> calls in the script with calls to the appropriate package management tool.
+</div>
+
+
+
+
+<div class="stb-download_box" style="background-image: url(http://binaryelysium.com/blog/images/download-b.png); min-height: 40px; padding-left: 50px; "><br>
+<strong><a href="http://binaryelysium.com/code/Blurb_Booksmart_Installer-0.2.tar.gz">Blurb Booksmart Installer</a></strong><br>
+Author: <a href="http://www.binaryelysium.com">Ramblurr</a>, version: 0.2, updated: December 12, 2009,<br>
+Requires Java Version 1.6 or higher, Ubuntu Linux.</div>
+
+
+
+
+<h3>Setting up the Location</h3>
+
+
+<p>After downloading the package, open up a terminal, and then extract the contents of the tarball.</p>
+
+<div class="highlight"><pre><code class="bash">tar zxf Blurb_Booksmart_Installer-0.2.tar.gz
+</code></pre>
+</div>
+
+
+<p>Change to the directory where you want booksmart installed, and copy <em>install.sh</em> to that location.</p>
+
+<div class="highlight"><pre><code class="bash">Example:
+<span class="nb">cd</span> /home/username/bin/
+cp /path/to/Blurb_Booksmart_Installer/install.sh .
+</code></pre>
+</div>
+
+
+
+
+<h3>Run the Installer</h3>
+
+
+<p>With the terminal still open to the location where you want booksmart installed, execute the install script. Don&rsquo;t forget to give it executable permissions first.</p>
+
+<div class="highlight"><pre><code class="bash">chmod +x install.sh
+./install.sh
+</code></pre>
+</div>
+
+
+<p>It will download all the necessary files to install booksmart 2.5.1. The process might take awhile on a slow internet connection.</p>
+
+<h3>Edit the launcher script </h3>
+
+
+<p>Once the script has finished executing, Booksmart should be installed in the current directory. You&rsquo;ll need to edit the launcher script, so it knows where Booksmart is. The launcher script is <em>booksmart.sh</em> in the tarball.</p>
+
+<p>Open it in an editor and edit the second line to point to the directory you created in step slash booksmart.</p>
+
+<div class="highlight"><pre><code class="bash">Example: <span class="nv">BOOKSMART_PATH</span><span class="o">=</span>/home/username/bin/booksmart
+</code></pre>
+</div>
+
+
+<p>You can put this launcher script anywhere and use it to start bookmark. Don&rsquo;t forget to give it executable permissions.</p>
+
+<p>By default, Booksmart saves its data in $HOME/My Documents if you don&rsquo;t like this you can change it by opening Booksmart and running File > Change Data Location.</p>
+
+<p><a href="http://binaryelysium.com/blog/uploads/2009/10/booksmart_linux.png" title="Booksmart running in Kubuntu" rel="lightbox"><img src="http://binaryelysium.com/blog/uploads/2009/10/booksmart_linux-300x187.png" alt="Booksmart running in Kubuntu" title="Booksmart running in Linux" width="300" height="187" class="size-medium wp-image-156" /></a></p>
+
+<p>Happy Blurbing : )</p>
+
+                </div>
+
+        </div> <!-- /post -->
+<h2>Recent Posts</h2>
+<ul class="posts">
+    
+    <li><span>13 Dec 2011</span> &raquo; <a href="http://binaryelysium.com/blog/2011/12/13/a-reluctant-relationship-yubikey-google-authentication.html">A Reluctant Relationship: Yubikey and Google Authentication</a></li>
+    
+    <li><span>12 Mar 2011</span> &raquo; <a href="http://binaryelysium.com/blog/2011/03/12/pbm-is-dead.html">PBM is dead! Long live PBM!</a></li>
+    
+    <li><span>24 Nov 2010</span> &raquo; <a href="http://binaryelysium.com/blog/2010/11/24/jungle-disk-and-local-encryption.html">Jungle Disk & Local Encryption</a></li>
+    
+      <li><a href="http://binaryelysium.com/blog/" title="Binary Elysium - Blog">Older posts</a></li>
+  </ul>
+
+
+<p><a href="/" title="Binary Elysium">&larr; More Awesome Stuff</a></p>
+</div> <!--- content -->
+<div class="bottom">
+<div class="content">
+
+
+</div>
+</div>
+
+<address class="tip">
+    <p>binaryelysium.com <span>&middot; page layout by <a href="http://inamidst.com/" title="In amidst">Sean Palmer</a><br />&middot;header image by <a href="http://cloaks.deviantart.com/art/Elysium-Texture-Pack-173766346">cloaks</a></span></p>
+
+
+

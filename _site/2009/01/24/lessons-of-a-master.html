@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head profile="http://gmpg.org/xfn/11">
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate"  href="http://rmblr.myopenid.com/" />
+    <link rel="openid2.local_id" href="http://rmblr.myopenid.com" />
+    <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+    <meta http-equiv="X-XRDS-Location"  content="http://www.myopenid.com/xrds?username=rmblr.myopenid.com" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>The Lessons of a Master </title>
+
+    <link rel="stylesheet" type="text/css" href="/blog/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/post_specific.css">
+    <link rel="stylesheet" href="/blog/css/textboxes.css" type="text/css" media="screen, projection" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22027971-1']);
+  _gaq.push(['_setDomainName', '.binaryelysium.com']);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</head>
+
+<div class="top">
+<div class="body">
+<h1><a href="http://binaryelysium.com/blog" title="Binary Elysium - Blog">Binary Elysium</a></h1>
+
+<div class="translucent">
+<div class="summary">
+Hey there! My name is Casey. I'm a software developer, nomad, language lover, and coffee fiend.
+</div>
+</div>
+
+<div class="content">
+
+    <div class="post">
+                <h2><a href="http://binaryelysium.com/blog/2009/01/24/lessons-of-a-master.html" rel="bookmark" title="Permanent Link to The Lessons of a Master">
+                    The Lessons of a Master
+                    </a></h2>
+                <p class="small">
+                         24 January 2009
+                </p>
+
+                <div class="entry">
+                    <p>Several of us at Camp KDE—myself included—owe a great debt to <a href="http://www.kdedevelopers.org/blog/432" tilte="Till Adam's blog">Till Adam</a>. When he came to the sunny, beautiful beaches of Jamaica, instead of spending his days lounging on the shore or swimming in the warm Caribbean, he chose to pen himself in a stuffy room with a dozen geeks and teach them Qt.</p>
+
+<p>Till works for Klarälvdalens Datakonsult AB (<a href="http://kdab.net" title="KDAB Website">KDAB</a>), <em>the</em> Qt consultancy firm. Besides working on large-scale, enterprise Qt applications, KDAB provides professional Qt training to such companies as IBM, Boeing, Ericsson, and J.D. Edwards. These training sessions usually run a few thousand Euros <em>per person</em>. With the OK from Nokia and Qt Software, Till provided us with a mini two day training course for free!</p>
+
+<p>While the content and materials Till used during the sessions is copyrighted, the information I learned is not. With his permission I&rsquo;m going to discuss a few pointers in this post. The topics covered somewhat basic/intermediate Qt skills, so those of you who have been programming with Qt for any length of time might not find anything new or interesting. However, for those, like me, who haven&rsquo;t quite developed our Qt Fu to the Master level, take away tips from here knowing it was passed from a master.</p>
+
+<p><b>#1 Most Common Performance Issue in Qt</b>
+Converting from a QPixmap to QImage too often.</p>
+
+<p>This tip is actually fairly well known, but apparently KDAB consultants run across this mistake very often while in the field. There is a great discussion of this topic over at <a href="http://techbase.kde.org/Development/Tutorials/Graphics/Performance" title="Discussion of QPixmap vs QImage at techbase">KDE&rsquo;s techbase</a>. In summary:</p>
+
+<ul>
+<li>A QImage is stored in main memory </li>
+<li>A QPixmap is stored in video memory</li>
+<li>Converting from a QPixmap to a QImage is a very expensive operation (see the above article for the explanation)</li>
+</ul>
+
+
+<p><b>#1 Most Common Cause of Crashes in Qt</b>
+Deleting this from slots</p>
+
+<p>This tip needs some more explanation. Essentially, a mistake many Qt programmers do is include executable code after emitting a signal.  Consider this flow of execution:</p>
+
+<ul>
+<li>The function <em>Produce::blend()</em> emits signal <em>pineapple()</em><li>
+<li>The slot <em>slotBlender()</em> deletes the instance of <em>Produce</em></li>
+<li>The signal/slot connection returns to the function <em>Produce::blend()</em>, which has some other executable code such as variable assignments after the emit.</li>
+<li>Crash. Since the slot deleted <em>Produce</em>, any code following the emit statement that modifies memory is now attempting to write to invalid memory. </li>
+
+One good practice to follow is: don't have any executable code following the last emit statement in your objects' methods.
+However, the real solution is: Use <a href="http://doc.trolltech.com/4.4/qobject.html#deleteLater" title="deleteLater() documentation">deleteLater()</a> on your QObjects.
+
+This post is getting somewhat lengthy and I potentially still have two topics to cover (Threading and Model/View). Most likely I'll dedicate a post regarding threading in Qt (I took better notes during that talk) in the next couple days. Many thanks to Till for the sessions, as well as KDAB and Qt Software for allowing them to happen. 
+
+
+                </div>
+
+        </div> <!-- /post -->
+<h2>Recent Posts</h2>
+<ul class="posts">
+    
+    <li><span>13 Dec 2011</span> &raquo; <a href="http://binaryelysium.com/blog/2011/12/13/a-reluctant-relationship-yubikey-google-authentication.html">A Reluctant Relationship: Yubikey and Google Authentication</a></li>
+    
+    <li><span>12 Mar 2011</span> &raquo; <a href="http://binaryelysium.com/blog/2011/03/12/pbm-is-dead.html">PBM is dead! Long live PBM!</a></li>
+    
+    <li><span>24 Nov 2010</span> &raquo; <a href="http://binaryelysium.com/blog/2010/11/24/jungle-disk-and-local-encryption.html">Jungle Disk & Local Encryption</a></li>
+    
+      <li><a href="http://binaryelysium.com/blog/" title="Binary Elysium - Blog">Older posts</a></li>
+  </ul>
+
+
+<p><a href="/" title="Binary Elysium">&larr; More Awesome Stuff</a></p>
+</div> <!--- content -->
+<div class="bottom">
+<div class="content">
+
+
+</div>
+</div>
+
+<address class="tip">
+    <p>binaryelysium.com <span>&middot; page layout by <a href="http://inamidst.com/" title="In amidst">Sean Palmer</a><br />&middot;header image by <a href="http://cloaks.deviantart.com/art/Elysium-Texture-Pack-173766346">cloaks</a></span></p>
+
+
+
