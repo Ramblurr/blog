@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<head profile="http://gmpg.org/xfn/11">
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate"  href="http://rmblr.myopenid.com/" />
+    <link rel="openid2.local_id" href="http://rmblr.myopenid.com" />
+    <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+    <meta http-equiv="X-XRDS-Location"  content="http://www.myopenid.com/xrds?username=rmblr.myopenid.com" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>A Reluctant Relationship: Yubikey and Google Authentication </title>
+
+    <link rel="stylesheet" type="text/css" href="/blog/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/post_specific.css">
+    <link rel="stylesheet" href="/css/textboxes.css" type="text/css" media="screen, projection" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22027971-1']);
+  _gaq.push(['_setDomainName', '.binaryelysium.com']);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</head>
+
+<div class="top">
+<div class="body">
+<h1><a href="http://binaryelysium.com//blog" title="Binary Elysium - Blog">Binary Elysium</a></h1>
+
+<div class="translucent">
+<div class="summary">
+Hey there! My name is Casey. I'm a software developer, nomad, language lover, and coffee fiend.
+</div>
+</div>
+
+<div class="content">
+
+    <div class="post">
+                <h2><a href="http://binaryelysium.com//blog/2011/12/13/a-reluctant-relationship-yubikey-google-authentication.html" rel="bookmark" title="Permanent Link to A Reluctant Relationship: Yubikey and Google Authentication">
+                    A Reluctant Relationship: Yubikey and Google Authentication
+                    </a></h2>
+                <p class="small">
+                         13 December 2011
+                </p>
+
+                <div class="entry">
+                    <p><em>Want the yubikey+google 2-factor authentication solution?</em> <a href="#goodstuff">Skip to the good stuff</a>.</p>
+
+<p>Passwords rule our lives on the Internet; they are the foundation of
+identity management. When a website or service wants to know who you are, you
+prove you are you with your username and password. However,  passwords aren&rsquo;t the fundamental piece of this identity management
+system.</p>
+
+<p>What happens when you lose your password? We&rsquo;ve all been through this
+jig before. The website usually sends an email to you with a link or instructions on
+how to reset your password. By proving you have access to your email, you are
+effectively proving you are you.</p>
+
+<p>Then, your email account is the lowest common denominator; with access to your email
+account (nearly) all your other accounts can be accessed. If you use
+a completely unique passwords for each service (and store them in a password manager like
+<a href="http://keepass.info">Keepass</a> or <a href="http://lastpass.com">Lastpass</a>), then access to your email account is even
+more attractive. Therefore, the importance of securing your email account cannot be
+overstated.</p>
+
+<p>When it comes to securing your email <a href="http://googleblog.blogspot.com/2011/02/advanced-sign-in-security-for-your.html">Google&rsquo;s 2-factor authentication</a> is pretty awesome. Even though there
+are still <a href="http://tech.kateva.org/2011/07/massive-security-hole-in-google-two.html">some important flaws</a> one should be aware of, it can
+significantly increase the security of your Google or Google Apps account.</p>
+
+<p>For me there is one major drawback to Google&rsquo;s 2-factor offering: it requires
+a cellphone to be useful. This is a drawback for several reasons.</p>
+
+<p>First, your smartphone isn&rsquo;t as secure as we would like. Mobile malware is on
+the rise&mdash;<a href="http://www.schneier.com/blog/archives/2011/11/android_malware.html">particularly</a> if you have an Android phone&mdash;and if I was
+a malware writer I would be targeting 2-factor authentication apps like
+Google&rsquo;s.</p>
+
+<p>The second drawback most people won&rsquo;t identify with: I don&rsquo;t want to carry
+a smartphone with me! I travel. A lot. In fact, <a href="http://elusivetruth.net">I travel by bike</a>.
+When traveling by bike, minimizing weight is important followed closely by
+minimizing the value of my equipment (shiny stuff <a href="https://twitter.com/#!/Ramblurr/status/144521420762918914">gets broken</a> or stolen), and smartphones are heavy and expensive. So, I carry a tiny and cheap $30 cellphone and swap sim cards as I enter new countries.</p>
+
+<p>How then can I retain the benefit of Google&rsquo;s 2-factor authentication, while
+ditching the phone? I could generate OTPs through Google and write them down,
+which I have been doing for awhile, but that is a huge PITA.</p>
+
+<p>Enter the <a href="http://yubico.com/yubikey">Yubikey</a>. The Yubikey is a tiny usb device that produces
+One-Time Passwords and appears to the OS as a USB keyboard making it work on all
+platforms. The Yubikey can hold two identities that can be configured according
+to four different options (Yubico OTP, OATH, static, challenge-response).</p>
+
+<p>A Yubikey seems like the perfect lightweight, secure replacement for OTP
+generation, how then could I use it with Google&rsquo;s 2-factor authentication?</p>
+
+<p><a name="goodstuff" /></p>
+
+<h3>Finding common ground: OATH-TOTP</h3>
+
+
+<p>Originally, I imagined some system that stored your Google 2-factor auth
+secret, and allowed you to auth with your Yubico OTP. Such a system would not
+be ideal, because wherever that system lived so would live your google secret. We
+want to be sure wherever the secret is stored is secure.</p>
+
+<p>As it turns out <a href="http://code.google.com/p/google-authenticator/">Google&rsquo;s 2-factor authenticator</a> is an implementation of the OATH-TOTP protocol, a system for generating one-time passwords via a HMAC-SHA1 hash using the current time as input.</p>
+
+<p>The Yubikey also happens to support the OATH-HOTP protocol (of which TOTP is
+a variant), so we should be able to configure the Yubikey to generate OATH-HOTP
+OTPs somehow. Unfortunately, the Yubikey is battery-less, so it is unable to
+store the current time.</p>
+
+<p>All is not lost, for the Yubikey&rsquo;s fourth configuration option is
+a <em>challenge-response</em> configuration. This allows a client-side application to
+send a challenge to the Yubikey, which the Yubikey uses as input to generate a HMAC-SHA1 hash that becomes the response. This is exactly the cryptographic hashed used by OATH-TOTP and hence Google&rsquo;s 2-factor auth.</p>
+
+<p>Around the same time I figured all this out, Yubico <a href="http://yubico.com/totp">posted</a> the same
+explanation I just gave, along with a Windows client-side application that used
+the challenge-response method described to enable Google authentication with
+a Yubikey. Huzzah!</p>
+
+<h3>YubiTOTP for Linux</h3>
+
+
+<p>It took awhile, but a <a href="http://mutantmonkey.in/">friend</a> and I eventually got around to implementing a similar
+client-side helper application for Linux.</p>
+
+<p>The implementation is fairly simple (if not pretty). A challenge is generated
+based on the current time, sent to the yubikey using the <em>ykchalresp</em> utility,
+and then the HMAC-SHA1 hash is mangled according to the HOTP specification to
+produce a 6 digit code.</p>
+
+<p>Before you can use the tool, you must configure your Yubikey, but then
+generating OTPs from your Yubikey is as simple as:
+<code>$ ./yubi_goog.py</code>.</p>
+
+<p>The tool can also be used to generate OTPs without a Yubikey (using the
+<em>&mdash;generate</em> flag), but you must enter the secret on every invocation.</p>
+
+<p><strong>Grab the tool and instructions over at the <a href="https://github.com/Ramblurr/yubi-goog">github repo</a>.</strong></p>
+
+<h3>Not Perfect</h3>
+
+
+<p>We now have a way to generate OTPs for Google&rsquo;s 2-factor authentication without
+a phone; however, this isn&rsquo;t the perfect solution. Generating a TOTP requires
+the current time, so the Yubikey must be told the current time which stipulates
+the use of a client-side helper application.</p>
+
+<p>So, using this method you can only use your Yubikey where you are able to run
+my helper app (or the windows version from Yubico). I often find myself in
+Internet cafes or other public terminals, where running a python script isn&rsquo;t
+feasible.</p>
+
+<p>As of yet I do not have a working solution. It would be fantastic if Google
+would natively support the Yubikey, but in the meantime we&rsquo;ll have to be
+satsfied with innovative hacks.</p>
+
+                </div>
+
+        </div> <!-- /post -->
+<h2>Recent Posts</h2>
+<ul class="posts">
+    
+    <li><span>13 Dec 2011</span> &raquo; <a href="http://binaryelysium.com//blog/2011/12/13/a-reluctant-relationship-yubikey-google-authentication.html">A Reluctant Relationship: Yubikey and Google Authentication</a></li>
+    
+    <li><span>12 Mar 2011</span> &raquo; <a href="http://binaryelysium.com//blog/2011/03/12/pbm-is-dead.html">PBM is dead! Long live PBM!</a></li>
+    
+    <li><span>24 Nov 2010</span> &raquo; <a href="http://binaryelysium.com//blog/2010/11/24/jungle-disk-and-local-encryption.html">Jungle Disk & Local Encryption</a></li>
+    
+      <li><a href="http://binaryelysium.com//" title="Binary Elysium - Blog">Older posts</a></li>
+  </ul>
+
+
+<p><a href="/" title="Binary Elysium">&larr; More Awesome Stuff</a></p>
+</div> <!--- content -->
+<div class="bottom">
+<div class="content">
+
+
+</div>
+</div>
+
+<address class="tip">
+    <p>binaryelysium.com <span>&middot; page layout by <a href="http://inamidst.com/" title="In amidst">Sean Palmer</a><br />&middot;header image by <a href="http://cloaks.deviantart.com/art/Elysium-Texture-Pack-173766346">cloaks</a></span></p>
+
+
+

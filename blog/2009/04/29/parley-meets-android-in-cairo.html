@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head profile="http://gmpg.org/xfn/11">
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate"  href="http://rmblr.myopenid.com/" />
+    <link rel="openid2.local_id" href="http://rmblr.myopenid.com" />
+    <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+    <meta http-equiv="X-XRDS-Location"  content="http://www.myopenid.com/xrds?username=rmblr.myopenid.com" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Parley meets Android in Cairo </title>
+
+    <link rel="stylesheet" type="text/css" href="/blog/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/post_specific.css">
+    <link rel="stylesheet" href="/css/textboxes.css" type="text/css" media="screen, projection" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22027971-1']);
+  _gaq.push(['_setDomainName', '.binaryelysium.com']);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</head>
+
+<div class="top">
+<div class="body">
+<h1><a href="http://binaryelysium.com//blog" title="Binary Elysium - Blog">Binary Elysium</a></h1>
+
+<div class="translucent">
+<div class="summary">
+Hey there! My name is Casey. I'm a software developer, nomad, language lover, and coffee fiend.
+</div>
+</div>
+
+<div class="content">
+
+    <div class="post">
+                <h2><a href="http://binaryelysium.com//blog/2009/04/29/parley-meets-android-in-cairo.html" rel="bookmark" title="Permanent Link to Parley meets Android in Cairo">
+                    Parley meets Android in Cairo
+                    </a></h2>
+                <p class="small">
+                         29 April 2009
+                </p>
+
+                <div class="entry">
+                    <p>I&rsquo;m exactly three months into my Arabic studies in Cairo, where I&rsquo;ve been taking time off university studies and Amarok development. I&rsquo;ve realized that acquiring a large vocabulary as fast as you can manage is a crucial part of studying a language intensively, and thanks to the awesome KDE-Edu folks I&rsquo;ve been <del>successfully</del> <em>barely</em> keeping up with the hundreds of new words I&rsquo;m assigned per week with <a href="http://edu.kde.org/parley/" title="Parley's Homepage">Parley</a>.</p>
+
+<p>The major problem I have with Parley is that I have to be in front of my computer to use it!</p>
+
+<p>I know you&rsquo;re laughing. That&rsquo;s like saying a major fault of beer is that you have to <em>drink it</em> to get drunk, after all Parley is a computer program.
+You&rsquo;re right, just because I hardly find the time to actually use the computer doesn&rsquo;t mean I should lay the blame on Parley. Technically, I should  blame the denizens of Cairo and their <a href="http://www.flickr.com/photos/tronics/380379732/" title="Typical Cairo Traffic">insane traffic</a>. Seriously, too many of my life&rsquo;s hours are wasted in the smelly, stuffy, taxis of Cairo (today was particularly bad, pardon the rant).</p>
+
+<p>This past weekend I ignored the towering pile of homework and whipped up a little application for Android devices that groks Parley&rsquo;s kvtml2 file format, displays lessons, and provides flashcard exercises. My app is really an Android Port of the J2ME mobile application <a href="http://sourceforge.net/projects/mobvoc/" title="MobVoc project home">MobVoc</a>. Michael, the MobVoc developer, did most of the hard work for me: parsing kvtml2 files into java data structures. Mad props to Michael; I definitely plan to pass along any contribute any bug fixes/optimizations I make to his code (such as sub-lessons support).</p>
+
+<p>The application &ndash; unimaginatively dubbed ParleyDroid for now &ndash; is extremely bare-bones. Here is the current feature set</p>
+
+<ul>
+<li> Pick a kvtml2 file from the SD card </li>
+<li> Choose 1 or more lessons to practice </li>
+<li> View flashcards of the words in the selected lessons.</li>
+<li> Gesture support in the flashcards: Long Press marks card as known, Fling Left/Right changes to Next/Prev card.
+<li> Each practice session has a short-term memory: i.e., if you mark a card as known you won't see it again that session but if you restart the session you will.</li>
+<li> <em>Arabic Support</em> - if the 2nd language is Arabic, it will be rendered correctly on screen</li>
+</ul>
+
+
+<p>The last feature is probably the most noteworthy. Android, by default does not support RTL or non-Latin scripts, but with a little Android-trickery-that-deserves-another-blog-post I&rsquo;m finally able to practice my vocabulary in the back of the taxi or while walking along the Nile.</p>
+
+<p>Binary and Source:
+<a href="http://www.binaryelysium.com/code/ParleyDroid-0.1.tar.gz" title="ParleyDroid Source">ParleyDroid Source</a> and
+<a href="http://www.binaryelysium.com/code/ParleyDroid-0.1.apk" title="ParleyDroid Android Binary">ParleyDroid Android Binary</a></p>
+
+<p>Obligatory Screenshots (click for full view):</p>
+
+<p><a href="http://binaryelysium.com//uploads/2009/04/pd_pick_file.png"><img src="http://binaryelysium.com//uploads/2009/04/pd_pick_file-150x150.png" alt="ParleyDroid Pick File Screen" title="ParleyDroid Pick File Screen" width="150" height="150" class="alignnone size-thumbnail wp-image-123" /></a><a href="http://binaryelysium.com//uploads/2009/04/pd_lessons.png"><img src="http://binaryelysium.com//uploads/2009/04/pd_lessons-150x150.png" alt="ParleyDroid Lessons Screen" title="ParleyDroid Lessons Screen" width="150" height="150" class="alignnone size-thumbnail wp-image-121" /></a></p>
+
+<p><a href="http://binaryelysium.com//uploads/2009/04/pd_word1.png"><img src="http://binaryelysium.com//uploads/2009/04/pd_word1-150x150.png" alt="ParleyDroid First Word Screen" title="ParleyDroid First Word Screen" width="150" height="150" class="alignnone size-thumbnail wp-image-124" /></a><a href="http://binaryelysium.com//uploads/2009/04/pd_word2_menu.png"><img src="http://binaryelysium.com//uploads/2009/04/pd_word2_menu-150x150.png" alt="ParleyDroid Second Word Screen w/ Arabic" title="ParleyDroid Second Word Screen w/ Arabic" width="150" height="150" class="alignnone size-thumbnail wp-image-125" /></a></p>
+
+                </div>
+
+        </div> <!-- /post -->
+<h2>Recent Posts</h2>
+<ul class="posts">
+    
+    <li><span>13 Dec 2011</span> &raquo; <a href="http://binaryelysium.com//blog/2011/12/13/a-reluctant-relationship-yubikey-google-authentication.html">A Reluctant Relationship: Yubikey and Google Authentication</a></li>
+    
+    <li><span>12 Mar 2011</span> &raquo; <a href="http://binaryelysium.com//blog/2011/03/12/pbm-is-dead.html">PBM is dead! Long live PBM!</a></li>
+    
+    <li><span>24 Nov 2010</span> &raquo; <a href="http://binaryelysium.com//blog/2010/11/24/jungle-disk-and-local-encryption.html">Jungle Disk & Local Encryption</a></li>
+    
+      <li><a href="http://binaryelysium.com//" title="Binary Elysium - Blog">Older posts</a></li>
+  </ul>
+
+
+<p><a href="/" title="Binary Elysium">&larr; More Awesome Stuff</a></p>
+</div> <!--- content -->
+<div class="bottom">
+<div class="content">
+
+
+</div>
+</div>
+
+<address class="tip">
+    <p>binaryelysium.com <span>&middot; page layout by <a href="http://inamidst.com/" title="In amidst">Sean Palmer</a><br />&middot;header image by <a href="http://cloaks.deviantart.com/art/Elysium-Texture-Pack-173766346">cloaks</a></span></p>
+
+
+

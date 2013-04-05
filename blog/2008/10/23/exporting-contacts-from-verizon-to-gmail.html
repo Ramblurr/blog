@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head profile="http://gmpg.org/xfn/11">
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate"  href="http://rmblr.myopenid.com/" />
+    <link rel="openid2.local_id" href="http://rmblr.myopenid.com" />
+    <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+    <meta http-equiv="X-XRDS-Location"  content="http://www.myopenid.com/xrds?username=rmblr.myopenid.com" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Exporting contacts from Verizon to Gmail </title>
+
+    <link rel="stylesheet" type="text/css" href="/blog/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/post_specific.css">
+    <link rel="stylesheet" href="/css/textboxes.css" type="text/css" media="screen, projection" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22027971-1']);
+  _gaq.push(['_setDomainName', '.binaryelysium.com']);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</head>
+
+<div class="top">
+<div class="body">
+<h1><a href="http://binaryelysium.com//blog" title="Binary Elysium - Blog">Binary Elysium</a></h1>
+
+<div class="translucent">
+<div class="summary">
+Hey there! My name is Casey. I'm a software developer, nomad, language lover, and coffee fiend.
+</div>
+</div>
+
+<div class="content">
+
+    <div class="post">
+                <h2><a href="http://binaryelysium.com//blog/2008/10/23/exporting-contacts-from-verizon-to-gmail.html" rel="bookmark" title="Permanent Link to Exporting contacts from Verizon to Gmail">
+                    Exporting contacts from Verizon to Gmail
+                    </a></h2>
+                <p class="small">
+                         23 October 2008
+                </p>
+
+                <div class="entry">
+                    <p>I got a <a href="http://www.t-mobileg1.com/">G1</a> today.</p>
+
+<p>That deserves a post unto itself, but I wanted to share a solution an annoying issue regarding switching from Verizon to T-Mobile. Before I got the G1 I had a LG-VX9800 (yes, ancient, I know) with around 200 contacts. Obviously one of the first things I wanted to do when I got my G1 was transfer all my contacts from the LG to the G1. There are several ways to do this</p>
+
+<ol>
+    <li> Go to a Verizon store and pay $10 for data backup</li>
+    <li> Buy a USB Cable for the LG-VX9800, and use <a href="http://www.bitpim.org/">bitpim</a></li>
+    <li> Manually copy (type) your contacts into the G1/Gmail</li>
+    <li> Use my method</li>
+</ol>
+
+
+<p>There was no way I was going to pay $10 for what should be a simple &ldquo;Export,&rdquo; so #1 was crossed out. I&rsquo;m impatient and didn&rsquo;t want to wait for a cable to be delivered and neither did I want to pay the money for one. There goes #2. I didn&rsquo;t even consider #3; I just listed it for completeness sake.</p>
+
+<p>That leaves my somewhat difficult and unreliable method. Basically, what I do is use Verizon&rsquo;s &ldquo;Backup Assistant&rdquo; tool to send my contacts to Verizon&rsquo;s website. Then I save the source of the &ldquo;Print Contacts&rdquo; page &ndash; because there is no export feature. With a little ruby I parse the file into Gmail&rsquo;s <a href="http://theregoesdave.com/2008/10/17/importing-contacts-into-gmail-guide-to-google-contact-csv-fields/">CSV format</a> and import the file via the Gmail contacts page.</p>
+
+<p>Here&rsquo;s a quick howto.</p>
+
+<ul>
+    <li> On your Verizon phone go to "Get Going -> Get a New App -> Backup Assistant" and install it for $1.50 a month.</li>
+    <li> Follow the prompts and backup your contacts.</li>
+    <li> Go to the <a href="http://www.verizonwireless.com/backupassistant">Verizon backup website </a>and sign in.</li>
+    <li> View your contacts and click the "Print Contacts" link. Save the source of this page to a file</li>
+    <li> <a href="http://www.binaryelysium.com/code/vzwparser.rb">Download this</a> script and run it against the saved html file. Save the output in "contacts.csv"</li>
+    <li> Go to the Contacts page in Gmail and select Import, and upload "contacts.csv" <em>Note:</em> I suggest using the "add these imported contacts to" a new group feature. Because you will likely have to merge and cleanup the imported contacts.</li>   
+        <li> Import and Enjoy</li>
+</ul>
+
+
+<p><strong>IMPORTANT:</strong> My script only grabs the following information from the Verizon contact list: Name, Email, Work Phone, Mobile Phone, and Home Phone.</p>
+
+                </div>
+
+        </div> <!-- /post -->
+<h2>Recent Posts</h2>
+<ul class="posts">
+    
+    <li><span>13 Dec 2011</span> &raquo; <a href="http://binaryelysium.com//blog/2011/12/13/a-reluctant-relationship-yubikey-google-authentication.html">A Reluctant Relationship: Yubikey and Google Authentication</a></li>
+    
+    <li><span>12 Mar 2011</span> &raquo; <a href="http://binaryelysium.com//blog/2011/03/12/pbm-is-dead.html">PBM is dead! Long live PBM!</a></li>
+    
+    <li><span>24 Nov 2010</span> &raquo; <a href="http://binaryelysium.com//blog/2010/11/24/jungle-disk-and-local-encryption.html">Jungle Disk & Local Encryption</a></li>
+    
+      <li><a href="http://binaryelysium.com//" title="Binary Elysium - Blog">Older posts</a></li>
+  </ul>
+
+
+<p><a href="/" title="Binary Elysium">&larr; More Awesome Stuff</a></p>
+</div> <!--- content -->
+<div class="bottom">
+<div class="content">
+
+
+</div>
+</div>
+
+<address class="tip">
+    <p>binaryelysium.com <span>&middot; page layout by <a href="http://inamidst.com/" title="In amidst">Sean Palmer</a><br />&middot;header image by <a href="http://cloaks.deviantart.com/art/Elysium-Texture-Pack-173766346">cloaks</a></span></p>
+
+
+

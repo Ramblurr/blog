@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head profile="http://gmpg.org/xfn/11">
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate"  href="http://rmblr.myopenid.com/" />
+    <link rel="openid2.local_id" href="http://rmblr.myopenid.com" />
+    <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+    <meta http-equiv="X-XRDS-Location"  content="http://www.myopenid.com/xrds?username=rmblr.myopenid.com" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>GSoC Report Week 4 </title>
+
+    <link rel="stylesheet" type="text/css" href="/blog/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/post_specific.css">
+    <link rel="stylesheet" href="/css/textboxes.css" type="text/css" media="screen, projection" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22027971-1']);
+  _gaq.push(['_setDomainName', '.binaryelysium.com']);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</head>
+
+<div class="top">
+<div class="body">
+<h1><a href="http://binaryelysium.com//blog" title="Binary Elysium - Blog">Binary Elysium</a></h1>
+
+<div class="translucent">
+<div class="summary">
+Hey there! My name is Casey. I'm a software developer, nomad, language lover, and coffee fiend.
+</div>
+</div>
+
+<div class="content">
+
+    <div class="post">
+                <h2><a href="http://binaryelysium.com//blog/2008/06/24/gsoc-report-week-4.html" rel="bookmark" title="Permanent Link to GSoC Report Week 4">
+                    GSoC Report Week 4
+                    </a></h2>
+                <p class="small">
+                         24 June 2008
+                </p>
+
+                <div class="entry">
+                    <h4>Project: <a href="http://www.mp3tunes.com">MP3tunes</a> + <a href="http://www.amarok.kde.org">Amarok</a> Integration</h4>
+
+
+<p><span style="font-size:8pt">Total Commits: <a href="http://kollide.net:8060/changelog/~author=link/Amarok" title="All my Amarok commits">84</a> Weekly Commits: 36</span><h4><a name="past">Past 7 Days</a></h4>Starting these posts with &ldquo;It was another busy week..&rdquo; is starting to get boring; I&rsquo;ll cook up something more exciting for next week.</p>
+
+<p>In case you missed it, in the past seven days <a href="http://binaryelysium.com/blog/2008/06/20/one-small-step-for-amarok/">history has been made</a>. I&rsquo;ll let that stand in as the bulk of my weekly report, but a few worthwhile things have occurred since then that deserve a mention.</p>
+
+<p>Remote Track Upload &ndash; You can now sideload tracks to your MP3tunes collection from remote sources in Amarok. What the heck is sideload and what remote sources you ask? Sideload is a feature of the MP3tunes API that allows for server-to-server transfers. This means you can give your Locker a URL to a track, and it will automatically be downloaded into your Locker. Currently Amarok sports three services with remote collections that are sideloadable to MP3tunes: Ampache, Magnatune, and Jamendo. This method of transferring is generally very fast, because the transfer bypasses your slow internet connection.</p>
+
+<p>Upload Progress Bar &ndash; When you upload (or sideload) tracks to MP3tunes there is now a simple status bar to let you know how far along in the process you are.</p>
+
+<p>Non-Supported Track Filtering &ndash; This one is simple: If you try and upload a file-type that MP3tunes doesn&rsquo;t support, Amarok will tell you and stop that track from being transferred.<h4><a name="upcoming">Upcoming 7 Days</a></h4></p>
+
+<ul>    <li>Work on allowing MP3tunes tracks to persist after a restart.</li>   <li>Flesh out the synchronization system: what it's going to do, and how it's going to do it.</li>  <li>Design any UI widgets needed for the syncing system</li></ul>
+
+
+<p>The first one will be simple, in fact I plan to code it up after writing this report. These second and third tasks, however, signify that I&rsquo;m moving into the last stage of the project. According to my original proposal I am ahead by a week, so I&rsquo;ll be using this week as extra time to plan and get a jump-start on the synchronization framework.</p>
+
+                </div>
+
+        </div> <!-- /post -->
+<h2>Recent Posts</h2>
+<ul class="posts">
+    
+    <li><span>13 Dec 2011</span> &raquo; <a href="http://binaryelysium.com//blog/2011/12/13/a-reluctant-relationship-yubikey-google-authentication.html">A Reluctant Relationship: Yubikey and Google Authentication</a></li>
+    
+    <li><span>12 Mar 2011</span> &raquo; <a href="http://binaryelysium.com//blog/2011/03/12/pbm-is-dead.html">PBM is dead! Long live PBM!</a></li>
+    
+    <li><span>24 Nov 2010</span> &raquo; <a href="http://binaryelysium.com//blog/2010/11/24/jungle-disk-and-local-encryption.html">Jungle Disk & Local Encryption</a></li>
+    
+      <li><a href="http://binaryelysium.com//" title="Binary Elysium - Blog">Older posts</a></li>
+  </ul>
+
+
+<p><a href="/" title="Binary Elysium">&larr; More Awesome Stuff</a></p>
+</div> <!--- content -->
+<div class="bottom">
+<div class="content">
+
+
+</div>
+</div>
+
+<address class="tip">
+    <p>binaryelysium.com <span>&middot; page layout by <a href="http://inamidst.com/" title="In amidst">Sean Palmer</a><br />&middot;header image by <a href="http://cloaks.deviantart.com/art/Elysium-Texture-Pack-173766346">cloaks</a></span></p>
+
+
+

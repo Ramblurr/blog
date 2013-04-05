@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head profile="http://gmpg.org/xfn/11">
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate"  href="http://rmblr.myopenid.com/" />
+    <link rel="openid2.local_id" href="http://rmblr.myopenid.com" />
+    <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+    <meta http-equiv="X-XRDS-Location"  content="http://www.myopenid.com/xrds?username=rmblr.myopenid.com" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>GSoC Report Week 3: Tanstaafl </title>
+
+    <link rel="stylesheet" type="text/css" href="/blog/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/post_specific.css">
+    <link rel="stylesheet" href="/css/textboxes.css" type="text/css" media="screen, projection" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22027971-1']);
+  _gaq.push(['_setDomainName', '.binaryelysium.com']);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+      : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</head>
+
+<div class="top">
+<div class="body">
+<h1><a href="http://binaryelysium.com//blog" title="Binary Elysium - Blog">Binary Elysium</a></h1>
+
+<div class="translucent">
+<div class="summary">
+Hey there! My name is Casey. I'm a software developer, nomad, language lover, and coffee fiend.
+</div>
+</div>
+
+<div class="content">
+
+    <div class="post">
+                <h2><a href="http://binaryelysium.com//blog/2008/06/17/gsoc-report-week-3-tanstaafl.html" rel="bookmark" title="Permanent Link to GSoC Report Week 3: Tanstaafl">
+                    GSoC Report Week 3: Tanstaafl
+                    </a></h2>
+                <p class="small">
+                         17 June 2008
+                </p>
+
+                <div class="entry">
+                    <h4>Project: <a href="http://www.mp3tunes.com">MP3tunes</a> + <a href="http://www.amarok.kde.org">Amarok</a> Integration</h4>
+
+
+<p><span style="font-size:8pt">Total Commits: <a href="http://kollide.net:8060/changelog/~author=link/Amarok" title="All my Amarok commits">51</a> Weekly Commits: 12</span><h4><a name="past">Past 7 Days</a></h4>It was another productive week in #amarok with over 150 commits! In the 12 of those that were mine I managed to do several things.</p>
+
+<ul>
+    <li>Added elegant session handling to the MP3tunes service</li>
+    <li>Fixed the collection search box, so you can filter your MP3tunes Locker.</li>
+    <li>Enabled Copy To Collection functionality, so you can now copy (read: download) mp3tunes tracks to some other collection!</li>
+</ul>
+
+
+<p>Of course, implementing those items wasn&rsquo;t as simple as it sounds, but the features are essential and basic.</p>
+
+<p>The search box (filtering) could use some improvement as currently it only filters via the artist field, but that is a limitation of the MP3tunes API. When I say it
+<em>&ldquo;only filters via the artist field&rdquo;</em> I mean that it only matches against artists, so searching for a particular track name will not work. To fully support the filtering feature the MP3tunes API would need to allow you to do something like get a list of artists based on a partial track name in a single request. That is just one example, and yes, I could workaround it by doing multiple queries, however that would slow the entire operation significantly. Users expect the search fields in Amarok to be snappy, not take ~5 seconds per. token they supply. It is certainly not a showstopper, and it functions well enough for now, but hopefully MP3tunes will be open to expanding their API later on down the rode. To be fair I have never come across a web API that supported that sort of complex searching. The <a href="http://ampache.org" title="Ampache!">Ampache</a> service in Amarok suffers from the same lack of functionality.</p>
+
+<p><em>Interjection: Major props to my GSoC mentor, <a href="http://amarok.kde.org/blog/categories/18-freespirit">Nikolaj</a>, for attempting to explain various parts of Amarok&rsquo;s innards to me, not only once, but the several times it took to get the concepts through my thick skull. Also, he&rsquo;s helped me track down several childish mistakes I&rsquo;ve made when I was at my wits end trying to locate them. I can&rsquo;t thank him enough. Hands down he&rsquo;s the best GSoC mentor. </em></p>
+
+<p>With the addition of &ldquo;Copy to Collection&rdquo; Amarok has taken a large step towards being fully integrated with MP3tunes. Up till this week all you could do was browse and stream your MP3tunes Locker. That is fine and dandy, but you could do that from the MP3tunes <a href="http://www.binaryelysium.com/images/mp3tunesPlayer.png">web player</a>, their <a href="http://mp3tunes/com/m">mobile player</a>, <a href="http://www.mp3tunes.com/cb/screenshots/" title="MP3tunes Screenshots">your PS3</a>, or any other number of their <a href="http://www.mp3tunes.com/partner/cb/partnerlist" title="mp3tunes devices">supported devices</a>. However, none of those options allow you to seamlessly download and organize your stored music into your local music collection at the click of a button.</p>
+
+<p>There is one shortcoming that needs to be addressed at some point before I&rsquo;m satisfied: there is no progress indicator of any kind when you download tracks. The only way to see if tracks are being downloaded after you press Go is to watch the destination directory for changes. Thankfully this affects all collections you can &ldquo;copy to/from&rdquo;, not just MP3tunes, so perhaps someone else will feel inclined to whip up a progress indicator. There&rsquo;s no such thing as a free lunch.<h4><a name="upcoming">Upcoming 7 Days:</a></h4>I have one big goal this week:</p>
+
+<ul>
+<li>Add MP3tunes Upload features</li>
+</ul>
+
+
+<p>By Monday next week, you will be able to do Copy tracks from your local collection, Ampache collection, and the <a href="http://www.magnatune.com" title="www.magnatune.com">Magnatune</a> database, to your MP3tunes locker.</p>
+
+<p><img src='http://www.binaryelysium.com/images/amarokCopyToCollection.png' alt='Copy to Collection' class='aligncenter' /></p>
+
+<p>There is quite a bit of work to be done before this can happen, but I will spare you the gritty implementation details until next week after I&rsquo;ve committed the code where my mouth is (?).</p>
+
+<p>Of course my weekly predictions wouldn&rsquo;t be complete without a task to fall back on if I happen to complete the aforementioned task in a Ballmer-Fueled rage. After upload is in place there is only one major item left: Syncing. I need to break &ldquo;Syncing&rdquo; into manageable actionables (quite a term, eh?) and then lay out some mid-level designs for the process. Later on during the week I will dedicate an entire post to this topic.</p>
+
+                </div>
+
+        </div> <!-- /post -->
+<h2>Recent Posts</h2>
+<ul class="posts">
+    
+    <li><span>13 Dec 2011</span> &raquo; <a href="http://binaryelysium.com//blog/2011/12/13/a-reluctant-relationship-yubikey-google-authentication.html">A Reluctant Relationship: Yubikey and Google Authentication</a></li>
+    
+    <li><span>12 Mar 2011</span> &raquo; <a href="http://binaryelysium.com//blog/2011/03/12/pbm-is-dead.html">PBM is dead! Long live PBM!</a></li>
+    
+    <li><span>24 Nov 2010</span> &raquo; <a href="http://binaryelysium.com//blog/2010/11/24/jungle-disk-and-local-encryption.html">Jungle Disk & Local Encryption</a></li>
+    
+      <li><a href="http://binaryelysium.com//" title="Binary Elysium - Blog">Older posts</a></li>
+  </ul>
+
+
+<p><a href="/" title="Binary Elysium">&larr; More Awesome Stuff</a></p>
+</div> <!--- content -->
+<div class="bottom">
+<div class="content">
+
+
+</div>
+</div>
+
+<address class="tip">
+    <p>binaryelysium.com <span>&middot; page layout by <a href="http://inamidst.com/" title="In amidst">Sean Palmer</a><br />&middot;header image by <a href="http://cloaks.deviantart.com/art/Elysium-Texture-Pack-173766346">cloaks</a></span></p>
+
+
+
