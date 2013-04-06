@@ -1,4 +1,6 @@
 GITHUB_REPONAME = "Ramblurr/blog"
+PROSE_DIR = "/home/ramblurr/docs/prose/prose"
+POEMS_DIR = "/home/ramblurr/docs/poems"
 require 'rubygems'
 require 'jekyll'
 require 'tmpdir'
@@ -16,6 +18,19 @@ namespace :site do
     })).process
   end
 
+  task :prose do
+      Dir.chdir(PROSE_DIR) do
+        system "./build.sh"
+      end
+      system "rsync -a --delete #{PROSE_DIR}/.build/ prose/"
+  end
+
+  task :poems do
+      Dir.chdir(POEMS_DIR) do
+        system "./build.sh"
+      end
+      system "rsync -a --delete #{POEMS_DIR}/.build/ poems/"
+  end
 
   desc "Init gh temp repo"
   task :init do
@@ -27,18 +42,17 @@ namespace :site do
   end
 
   desc "Generate and publish blog to gh-pages"
-  task :publish => [:generate] do
-    Dir.mktmpdir do |tmp|
+  task :publish => [:generate, :prose, :poems] do
       Dir.chdir('_site_gh') do
         system "git pull --rebase origin gh-pages"
       end
       system "rsync --exclude='site:publish' -az --delete _site/* _site_gh/"
-      Dir.chdir "_site_gh"
-      system "git rm $(git ls-files --deleted)"
-      system "git add ."
-      message = "Site updated at #{Time.now.utc}"
-      system "git commit -m #{message.shellescape}"
-      system "git push origin gh-pages"
-    end
+      Dir.chdir "_site_gh" do
+          system "git rm $(git ls-files --deleted)"
+          system "git add ."
+          message = "Site updated at #{Time.now.utc}"
+          system "git commit -m #{message.shellescape}"
+          system "git push origin gh-pages"
+      end
   end
 end

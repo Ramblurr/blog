@@ -1,0 +1,218 @@
+abbr,acronym
+{
+    border-bottom:none;
+}
+
+var,cite
+{
+    font-style:normal;
+}
+
+body
+{
+    text-align:center;
+    background:#777;
+    color:#000;
+    font-family: 'Merriweather', Georgia,serif;
+    font-size:100%;
+    line-height:1.25;
+}
+
+.author
+{
+    font-family:roman;
+}
+
+body *
+{
+    font-family:inherit;
+    font-size:inherit;
+}
+
+.separator
+{
+    font-family:"Minion Pro","Arial Unicode",Arial;
+}
+
+
+var,.date
+{
+    font-family:"Hoefler Text",Constantia,Georgia,serif;
+}
+
+.amp
+{
+    font-family:"Minion Pro","Hoefler Text",Constantia,"Palatino Linotype",Georgia,serif;
+}
+
+.hundred
+{
+    letter-spacing:-1px;
+}
+
+h1,h2,h3
+{
+    font-weight:400;
+    text-align:left;
+}
+
+h3,abbr,acronym,.author,.field
+{
+    font-variant:small-caps;
+    letter-spacing:.1em;
+    text-transform:lowercase;
+}
+
+q:before
+{
+    content:"“";
+}
+
+q:after
+{
+    content:"”";
+}
+
+#page
+{
+    border:1px solid #F0F0F0;
+    text-align:justify;
+    background:#F0F0F0;
+    width:40.5em;
+    min-height:57.2756em;
+    -webkit-border-radius:.5em;
+    margin:0 auto;
+}
+
+#textblock
+{
+    margin:2.12501em 5em 9em 4.5em;
+}
+
+kbd
+{
+    font-family:monospace;
+}
+
+a
+{
+    text-decoration:none;
+}
+
+a img
+{
+    border:none;
+}
+
+a .author
+{
+    color:#000;
+}
+
+a[href]:hover
+{
+    text-decoration:underline;
+}
+
+p
+{
+    text-indent:1.25em;
+}
+
+.unit
+{
+    font-style:italic;
+    letter-spacing:0;
+    text-transform:none;
+    font-variant:normal;
+}
+
+ol,ul
+{
+    margin:1.25em 0;
+}
+
+h1
+{
+    font-size:2.5em;
+    padding:1.45833em 0;
+}
+
+h2
+{
+    font-size:1.33333em;
+    padding:1.25em 0;
+}
+
+h3
+{
+    font-size:1.16667em;
+    padding:1.51786em 0;
+}
+
+table
+{
+    border-collapse:collapse;
+    text-align:right;
+}
+
+table td
+{
+    padding-left:1em;
+}
+
+td.property
+{
+    padding-left:0;
+}
+
+.ruled
+{
+    background:url(20px1.png);
+}
+
+#ft
+{
+    text-align:right;
+}
+
+
+
+body,div,ol,ul,li,h1,h2,h3,th,td,var,blockquote,pre,#panels div,#panels form,#panels input,#panels td
+{
+    margin:0;
+    padding:0;
+}
+
+.amp,.publication,code,blockquote,dfn,em,strong,table thead,#base-panel .px,#base-panel .px var,#other-values
+{
+    font-style:italic;
+}
+
+body,.separator,#ft,#base-panel .field-name,#line-height-icon
+{
+    text-align:center;
+}
+
+a,a .author:hover,#rhythm-panel tfoot .off-beat
+{
+    color:#b30000;
+}
+
+div+p,h1+p,h2+p,h3+p,p.first,pre+p,p:first-child,ul+p,ol+p,#caveat
+{
+    text-indent:0;
+}
+
+td.property,td.basis,#output-panel .bd
+{
+    text-align:left;
+}
+
+table caption,#scale-panel .base.empty
+{
+    text-indent:-1000em;
+}
+
+p {
+}
