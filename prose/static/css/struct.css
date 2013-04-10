@@ -1,0 +1,61 @@
+#page
+{
+    border:1px solid #F0F0F0;
+    text-align:justify;
+    background:#F0F0F0;
+    width:40.5em;
+    min-height:57.2756em;
+    -webkit-border-radius:.5em;
+    margin:0 auto;
+}
+
+#textblock
+{
+    margin:2.12501em 5em 9em 4.5em;
+}
+
+body
+{
+    text-align:center;
+    background:#777;
+    color:#000;
+    font-family: 'Merriweather', Georgia,serif;
+    font-size:100%;
+    line-height:1.25;
+    margin:0;
+    padding: 0;
+}
+
+.author
+{
+    font-family:roman;
+}
+
+a
+{
+    text-decoration:none;
+}
+
+a img
+{
+    border:none;
+}
+
+a .author
+{
+    color:#000;
+}
+
+a[href]:hover
+{
+    text-decoration:underline;
+}
+
+abbr,acronym,.author,.field
+{
+    font-variant:small-caps;
+    letter-spacing:.1em;
+    text-transform:lowercase;
+}
+
+
