@@ -22,14 +22,14 @@ namespace :site do
       Dir.chdir(PROSE_DIR) do
         system "./build.sh"
       end
-      system "rsync -a --delete #{PROSE_DIR}/.build/ prose/"
+      system "rsync -LCa --delete #{PROSE_DIR}/.build/ prose/"
   end
 
   task :poems do
       Dir.chdir(POEMS_DIR) do
         system "./build.sh"
       end
-      system "rsync -a --delete #{POEMS_DIR}/.build/ poems/"
+      system "rsync -LCa --delete #{POEMS_DIR}/.build/ poems/"
   end
 
   desc "Init gh temp repo"
