@@ -71,6 +71,21 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>iyer/why-we-travel.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>iyer/shock-of-arrival.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>iyer/index.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>maharaj/iam.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
