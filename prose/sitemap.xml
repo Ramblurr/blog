@@ -36,6 +36,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>roberts/index.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>rao.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -86,6 +91,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>quotes/index.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>maharaj/iam.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -102,6 +112,16 @@
     </url>
     <url>
         <loc>hayden.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>everson/index.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>flynt/index.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
