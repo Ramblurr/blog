@@ -86,22 +86,21 @@ Hey there! My name is Casey. I'm a software developer, nomad, language lover, an
 <span class="c">## Do not edit below ##</span>
 
 <span class="nv">KEY</span><span class="o">=</span><span class="k">$(</span><span class="nv">$DIALOG</span> --title <span class="s2">&quot;Start Encrypted Jungle Disk&quot;</span> --password <span class="s2">&quot;Input key to decrypt $ENCFS_ROOTDIR. Jungle Disk will be started following a successful mount.&quot;</span><span class="k">)</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> !<span class="o">=</span> 0 <span class="o">]</span>; <span class="k">then</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> !<span class="o">=</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
   <span class="c"># user pressed cancel</span>
   <span class="nb">exit</span>
 <span class="k">fi</span>
 
-<span class="nb">echo</span> <span class="nv">$KEY</span> | <span class="nv">$ENCFS</span> --stdinpass <span class="nv">$ENCFS_ROOTDIR</span> <span class="nv">$ENCFS_MNTPOINT</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> !<span class="o">=</span> 0 <span class="o">]</span>; <span class="k">then</span>
+<span class="nb">echo</span> <span class="nv">$KEY</span> <span class="p">|</span> <span class="nv">$ENCFS</span> --stdinpass <span class="nv">$ENCFS_ROOTDIR</span> <span class="nv">$ENCFS_MNTPOINT</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> !<span class="o">=</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
   <span class="nv">$DIALOG</span> --title <span class="s2">&quot;Mount Failed&quot;</span> --msgbox <span class="s2">&quot;The mount of $ENCFS_MNTPOINT failed. Aborting Jungle Disk start.&quot;</span> 0x0
   <span class="nb">exit</span>
 <span class="k">fi</span>
 
 <span class="c">#start JD</span>
 
-<span class="nv">$JD</span> &amp;
-</code></pre>
-</div>
+<span class="nv">$JD</span> <span class="p">&amp;</span>
+</code></pre></div>
 
 
 

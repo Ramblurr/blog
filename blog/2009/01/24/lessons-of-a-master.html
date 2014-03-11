@@ -78,17 +78,16 @@ Deleting this from slots</p>
 
 <p>This tip needs some more explanation. Essentially, a mistake many Qt programmers do is include executable code after emitting a signal.  Consider this flow of execution:</p>
 
-<ul>
+<p><ul>
 <li>The function <em>Produce::blend()</em> emits signal <em>pineapple()</em><li>
 <li>The slot <em>slotBlender()</em> deletes the instance of <em>Produce</em></li>
 <li>The signal/slot connection returns to the function <em>Produce::blend()</em>, which has some other executable code such as variable assignments after the emit.</li>
-<li>Crash. Since the slot deleted <em>Produce</em>, any code following the emit statement that modifies memory is now attempting to write to invalid memory. </li>
+<li>Crash. Since the slot deleted <em>Produce</em>, any code following the emit statement that modifies memory is now attempting to write to invalid memory. </li></p>
 
-One good practice to follow is: don't have any executable code following the last emit statement in your objects' methods.
-However, the real solution is: Use <a href="http://doc.trolltech.com/4.4/qobject.html#deleteLater" title="deleteLater() documentation">deleteLater()</a> on your QObjects.
+<p>One good practice to follow is: don&rsquo;t have any executable code following the last emit statement in your objects' methods.
+However, the real solution is: Use <a href="http://doc.trolltech.com/4.4/qobject.html#deleteLater" title="deleteLater() documentation">deleteLater()</a> on your QObjects.</p>
 
-This post is getting somewhat lengthy and I potentially still have two topics to cover (Threading and Model/View). Most likely I'll dedicate a post regarding threading in Qt (I took better notes during that talk) in the next couple days. Many thanks to Till for the sessions, as well as KDAB and Qt Software for allowing them to happen. 
-
+<p>This post is getting somewhat lengthy and I potentially still have two topics to cover (Threading and Model/View). Most likely I&rsquo;ll dedicate a post regarding threading in Qt (I took better notes during that talk) in the next couple days. Many thanks to Till for the sessions, as well as KDAB and Qt Software for allowing them to happen.</p>
 
                 </div>
 

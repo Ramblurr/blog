@@ -63,7 +63,7 @@ Update: 2010.11.06. Fixed download link.
 
 <p>Blurb Booksmart is a book layouting application from <a href="http://www.blurb.com">Blurb Inc.</a> that enables budding authors to create books using their own text and images. Think of it as a highly specialized Adobe Illustrator or Microsoft Publisher. After creating your book in the software, you upload it to Blurb&rsquo;s website where you can then order printed copies of the book.</p>
 
-<p>Officially, Blurb supports Booksmart only on Windows and Mac, however it is a generic Java application, and as such can easily be ran on Linux &ndash; with some finagling. You could try and run it through wine, but the layer of emulated Windows on top of the Java makes for an annoyingly sluggish experience.  To make it easier for others, I&rsquo;ve created a little script that will automatically download, convert, and install Booksmart in Linux.</p>
+<p>Officially, Blurb supports Booksmart only on Windows and Mac, however it is a generic Java application, and as such can easily be ran on Linux - with some finagling. You could try and run it through wine, but the layer of emulated Windows on top of the Java makes for an annoyingly sluggish experience.  To make it easier for others, I&rsquo;ve created a little script that will automatically download, convert, and install Booksmart in Linux.</p>
 
 <div class='stb-info_box'>
 Note: While, the following instructions are Ubuntu specific, a determined other-distro user could replace the <em>apt </em> calls in the script with calls to the appropriate package management tool.
@@ -86,8 +86,7 @@ Requires Java Version 1.6 or higher, Ubuntu Linux.</div>
 <p>After downloading the package, open up a terminal, and then extract the contents of the tarball.</p>
 
 <div class="highlight"><pre><code class="bash">tar zxf Blurb_Booksmart_Installer-0.2.tar.gz
-</code></pre>
-</div>
+</code></pre></div>
 
 
 <p>Change to the directory where you want booksmart installed, and copy <em>install.sh</em> to that location.</p>
@@ -95,8 +94,7 @@ Requires Java Version 1.6 or higher, Ubuntu Linux.</div>
 <div class="highlight"><pre><code class="bash">Example:
 <span class="nb">cd</span> /home/username/bin/
 cp /path/to/Blurb_Booksmart_Installer/install.sh .
-</code></pre>
-</div>
+</code></pre></div>
 
 
 
@@ -108,8 +106,7 @@ cp /path/to/Blurb_Booksmart_Installer/install.sh .
 
 <div class="highlight"><pre><code class="bash">chmod +x install.sh
 ./install.sh
-</code></pre>
-</div>
+</code></pre></div>
 
 
 <p>It will download all the necessary files to install booksmart 2.5.1. The process might take awhile on a slow internet connection.</p>
@@ -122,8 +119,7 @@ cp /path/to/Blurb_Booksmart_Installer/install.sh .
 <p>Open it in an editor and edit the second line to point to the directory you created in step slash booksmart.</p>
 
 <div class="highlight"><pre><code class="bash">Example: <span class="nv">BOOKSMART_PATH</span><span class="o">=</span>/home/username/bin/booksmart
-</code></pre>
-</div>
+</code></pre></div>
 
 
 <p>You can put this launcher script anywhere and use it to start bookmark. Don&rsquo;t forget to give it executable permissions.</p>
